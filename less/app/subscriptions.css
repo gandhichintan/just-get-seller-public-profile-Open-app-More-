@@ -1,0 +1,53 @@
+﻿.my-subscriptions .breadcrumb {
+  margin-bottom: 0px;
+}
+.my-subscriptions label {
+  font-size: 12px;
+  margin: 0;
+  display: block;
+}
+.my-subscriptions .krajee-default.file-preview-frame .kv-file-content {
+  width: initial !important;
+  height: initial !important;
+}
+.my-subscriptions .krajee-default.file-preview-frame .file-caption-info,
+.my-subscriptions .krajee-default.file-preview-frame .file-drag-handle,
+.my-subscriptions .krajee-default.file-preview-frame .kv-file-zoom {
+  display: none;
+}
+.my-subscriptions .deliverable-translation {
+  position: relative;
+}
+.my-subscriptions .deliverable-translation .btn.remove {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+}
+.list-subscriptions {
+  list-style: none;
+}
+.list-subscriptions li {
+  clear: both;
+  cursor: pointer;
+  line-height: 30px;
+}
+.list-subscriptions li i {
+  font-size: 18px;
+  width: 30px;
+}
+.subscription {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.subscription h4 {
+  display: inline-block;
+  top: 7px;
+  position: relative;
+  left: 17px;
+}
+@media (max-width: 480px) {
+  .subscription h4 {
+    left: 7px;
+    font-size: 15px;
+  }
+}

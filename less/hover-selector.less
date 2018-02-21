@@ -1,0 +1,147 @@
+﻿
+
+         .hover-selector {
+             /* Size and position */
+             position: relative;
+             display: inline-block;
+             margin: 0 auto;
+             padding: 10px;
+             /*width: 150px;*/
+             padding-right:35px;
+             /* Styles */
+             background: #fff;
+             border-radius: 7px;
+             border: 1px solid rgba(0,0,0,0.15);
+             cursor: pointer;
+             outline: none;
+             /* Font settings */
+             color: @brand-secondary;
+             z-index:2000;
+            
+           -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.71);
+            -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.71);
+            box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.71);
+
+         }
+
+        .hover-selector:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            margin-top: -3px;
+            border-width: 6px 6px 0 6px;
+            border-style: solid;
+            border-color: @brand-tertiary transparent;
+        }
+
+        .hover-selector .dropdown {
+            /* Size & position */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            /* Styles */
+            background: white;
+            border-radius: inherit;
+            border: 1px solid rgba(0,0,0,0.17);
+            
+           -webkit-box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.71);
+            -moz-box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.71);
+            box-shadow: 3px 4px 10px 0px rgba(0,0,0,0.71);             
+
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -ms-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+            list-style: none;
+            /* Hiding */
+            opacity: 0;
+            pointer-events: none;
+            padding-left: 0;
+        }
+
+        .hover-selector .dropdown:after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;
+            right: 15px;
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: #fff transparent;
+        }
+
+        .hover-selector .dropdown:before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;
+            right: 13px;
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: rgba(0,0,0,0.1) transparent;
+        }
+
+        .hover-selector .dropdown li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #8aa8bd;
+            border-bottom: 1px solid #e6e8ea;
+           
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -ms-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+
+
+        .hover-selector .dropdown li:first-of-type a {
+            border-radius: 7px 7px 0 0;
+        }
+
+        .hover-selector .dropdown li:last-of-type a {
+            border: none;
+            border-radius: 0 0 7px 7px;
+        }
+
+        /* Hover state */
+
+        .hover-selector .dropdown li:hover a {
+            background:  @brand-tertiary;
+        }
+
+        /* Active state */
+
+        .hover-selector.active .dropdown {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .hover-opt i {
+            /*padding-right: 10px;*/
+        }
+        .hover-opt span {
+            padding-left: 5px;
+        }
+
+        /* No CSS3 support */
+
+        .no-opacity .hover-selector .dropdown,
+        .no-pointerevents .hover-selector .dropdown {
+            display: none;
+            opacity: 1; /* If opacity support but no pointer-events support */
+            pointer-events: auto; /* If pointer-events support but no pointer-events support */
+        }
+
+        .no-opacity .hover-selector.active .dropdown,
+        .no-pointerevents .hover-selector.active .dropdown {
+            display: block;
+        }

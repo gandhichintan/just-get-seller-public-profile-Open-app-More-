@@ -1,0 +1,132 @@
+﻿@import "../skin/bootstrap/variables";
+@import "../skin/variables";
+
+
+@media( max-width: @screen-xs ) {
+    #proposal-tender-view {
+        .panel-body {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.buyer-discussion-with-seller{
+
+    .deliverables-header {
+        display:none;
+    }
+
+    .row-deliverable {
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: inset 0 0 15px -3px rgba(116, 111, 111, 0.72);
+        -webkit-box-shadow: inset 0 0 15px -3px rgba(116, 111, 111, 0.72);
+        -moz-box-shadow: inset 0 0 15px -3px rgba(116, 111, 111, 0.72);
+        small{
+            @media( min-width: 650px ) {
+                display:inline-block;
+                min-width:100px;
+            }
+            display:none;
+        }
+    }
+
+}
+
+#proposal-tender-view {
+    .portlet {
+        .portlet-title {
+            margin-bottom: 15px;
+        }
+
+        .row-proposal {
+            div {
+//                padding: 0 5px;
+            }
+        }
+    }
+
+    .proposal-money-label {
+        font-size: large;
+        font-weight: bold;
+        white-space:nowrap;
+    }
+    .row-deliverable {
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: inset 0 0 15px -3px rgba(116, 111, 111, 0.72);
+        -webkit-box-shadow: inset 0 0 15px -3px rgba(116, 111, 111, 0.72);
+        -moz-box-shadow: inset 0 0 15px -3px rgba(116, 111, 111, 0.72);
+        small{
+            @media( min-width: 650px ) {
+                display:inline-block;
+                min-width:100px;
+            }
+            display:block;
+            color:@brand-secondary;
+        }
+    }
+    .deliverable-title-container button {
+        position: absolute;
+        left: -6px;
+        top: 7px;
+        font-size: 9px;
+    }
+    .row-total{
+        line-height:30px;
+        font-size:15px;
+    }
+    .kv-file-content {
+        height:initial !important;
+    }
+}
+
+
+
+#proposal-attachments-and-comment {
+    @media( min-width: @screen-sm ) {
+        > div {
+            float: none;
+            display: table-cell;
+        }
+
+        display: table;
+        width: 100%;
+    }
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+
+#container-my-procurements, #proposal-tender-view {
+    .portlet-title{
+        .hidden-xs{
+            text-decoration:underline;
+        }
+    }
+}
+
+
+.proposal-details
+{
+    padding:20px;
+    .xs-toinline-label{
+        font-size:10px;
+        @media (max-width: @screen-sm ){
+            min-width: 100px;
+            display:inline-block;
+        }
+        display:block;
+    }
+}
+
+.customer-proposal-comments
+{
+    margin: 5px 10px 10px;
+    .comments-list
+    {
+        margin-top: -10px;
+    }
+}

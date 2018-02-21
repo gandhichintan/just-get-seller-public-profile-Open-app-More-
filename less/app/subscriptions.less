@@ -1,0 +1,67 @@
+﻿@import "../skin/bootstrap/variables";
+
+.my-subscriptions {
+    .breadcrumb {
+        margin-bottom: 0px;
+    }
+
+    label {
+        font-size: 12px;
+        margin: 0;
+        display: block;
+    }
+
+    .krajee-default.file-preview-frame {
+        .kv-file-content {
+            width: initial !important;
+            height: initial !important;
+        }
+        .file-caption-info, .file-drag-handle, .kv-file-zoom{
+            display:none;
+        }
+    }
+
+    .deliverable-translation{
+        position:relative;
+        .btn.remove{
+            position:absolute;
+            top:50%;
+            left:-15px;
+        }
+    }
+}
+
+
+.list-subscriptions {
+    list-style: none;
+
+    li {
+        clear: both;
+        cursor: pointer;
+        line-height: 30px;
+
+        i {
+            font-size: 18px;
+            width: 30px;
+        }
+    }
+}
+
+.subscription {
+
+    margin-bottom: 5px;
+    padding: 5px;
+
+    h4 {
+        display: inline-block;
+        top: 7px;
+        position: relative;
+        left: 17px;
+
+        @media (max-width: @screen-xs) {
+            left: 7px;
+            font-size: 15px;
+        }
+    }
+
+}

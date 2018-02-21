@@ -1,0 +1,1033 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+
+<head>
+    <title>Profile data</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="fb:app_id" content="" />
+
+    <meta property="og:url" content="https://just-get.com/?activeTab=userProfile" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" name="description" content="Any service, any time!" />
+    <meta property="og:image" content="http://www.just-get.com/skin/1200-en.png" />
+
+    <meta property="og:title" content="Profile data" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Profile data" />
+    <meta name="twitter:image" content="http://www.just-get.com/skin/1200-en.png" />
+    <meta name="twitter:description" content="Any service, any time!" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.6/css/fileinput.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://just-get.com/api/cdn/css/general.css" />
+    <link href="/less/skin/skin.min.css" rel="stylesheet" />
+    <link href="/less/app/general.min.css" rel="stylesheet" />
+    <link href="/less/app/customer.min.css" rel="stylesheet" />
+    <link href="/less/app/mailbox.min.css" rel="stylesheet" />
+    <link href="/less/app/proposal.min.css" rel="stylesheet" />
+    <link href="/less/app/user-profile.min.css" rel="stylesheet" />
+    <link href="/less/app/subscriptions.min.css" rel="stylesheet" />
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.6/js/fileinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/obj.assign.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/Vendor/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+
+    <script src="https://just-get.com/Source/JsTranslation?cultureInfo=en-GB.js"></script>
+
+
+    <script>
+
+        window.bitMin = window.bitMin || {};
+
+        Object.assign(window.bitMin, {
+            viewData: {"appInsightsInstrumentationKey":"","cultureInfo":"en-GB"},
+        });
+
+    </script>
+
+    <script src="https://just-get.com/api/CDN/Script/get-location.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/helpers.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/justGet.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/appInsights.js"></script>
+
+
+    <link rel="shortcut icon" href="favicon/32.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/16.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+
+
+        <header class="navbar" role="banner">
+
+            <div class="container">
+
+                <div class="navbar-header hidden-xs">
+                    <a href="http://www.just-get.com" class="navbar-brand navbar-brand-img">
+                        <img src="/Content/_img/logo-vertical-black.png" style="height:50px;" />
+                    </a>
+                </div>
+
+                <nav class="navbar-collapse" role="navigation">
+                    <div class="navbar-header fullscreen pull-left" style="display: none;">
+                        <button class="btn btn-tertiary" onclick="window.history.back()">
+                            <i class="fa fa-arrow-left"></i>
+                        </button>
+                        <button class="btn btn-tertiary" onclick="location.reload()">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+
+                    </div>
+                    <ul class="nav navbar-nav navbar-left">
+
+                        <li class="dropdown navbar-notification">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope navbar-notification-icon"></i>
+                                <span class="visible-xs-inline">&nbsp;Messages</span>
+                            </a>
+                        </li>
+
+                        <li class="dropdown navbar-notification">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell navbar-notification-icon"></i>
+                                <span class="visible-xs-inline">&nbsp;Notifications</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div class="language-switch hover-selector" tabindex="1">
+                                <span class="hover-opt">
+                                    <i class="fa fa-wrench"></i>
+                                    <span>Service provider</span>
+                                </span>
+                                <ul class="dropdown">
+
+                                    <li>
+                                        <a href="/Account/ChangeRole" class="hover-opt">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span>Client</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="pull-right">
+                                <div class="language-switch hover-selector" tabindex="1" style="z-index: 1800;">
+                                    <span class="hover-opt">
+                                        <i class="flag-icon flag-icon-gb"></i>
+                                        <span>English</span>
+                                    </span>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=et-EE" class="hover-opt">
+                                                <i class="flag-icon flag-icon-ee"></i>
+                                                <span>eesti</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=fi-FI" class="hover-opt">
+                                                <i class="flag-icon flag-icon-fi"></i>
+                                                <span>suomi</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=ru-RU" class="hover-opt">
+                                                <i class="flag-icon flag-icon-ru"></i>
+                                                <span>русский</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+
+
+
+
+
+
+        <div class="mainnav ">
+
+            <div class="container">
+                <a class="mainnav-toggle" data-toggle="collapse" data-target=".mainnav-collapse">
+                    <span class="sr-only">ToggleNavigation</span>
+                    <i class="fa fa-bars"></i>
+                </a>
+                <nav class="collapse mainnav-collapse" role="navigation">
+
+                    <form class="mainnav-form" role="search" action="/TenderRequest/SellerTenders">
+                        <input type="text" class="form-control input-md mainnav-search-query" placeholder="Search" name="searchString">
+                        <button class="btn btn-sm mainnav-form-btn"><i class="fa fa-search"></i></button>
+                    </form>
+
+                    <ul class="mainnav-menu nav navbar-nav">
+                        <li class="dropdown on-hover ">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Tenders
+                                <i class="mainnav-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/TenderRequest/ImportantTenders">
+                                        <i class="fa fa-star-half-o dropdown-icon"></i>
+                                        Important tenders
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/TenderRequest/SellerTenders">
+                                        <i class="fa fa-list dropdown-icon"></i>
+                                        All tenders
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown ">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                My sale
+                                <i class="mainnav-caret"></i>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/Business">
+                                        <i class="fa fa-shopping-cart dropdown-icon"></i>
+                                        Subscription of categories
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Business/MySubscriptions">
+                                        <i class="fa fa-briefcase dropdown-icon"></i>
+                                        My services
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Proposal/Index/Tenders">
+                                        <i class="fa fa-briefcase dropdown-icon"></i>
+                                        My contracts
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                        </li>
+
+                        <li class="dropdown ">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Inbox
+                                <i class="mainnav-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/Mailbox/Inbox">
+                                        <i class="fa fa-inbox dropdown-icon "></i>
+                                        Inbox
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Mailbox/Notifications">
+                                        <i class="fa fa-info dropdown-icon "></i>
+                                        All notifications
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Mailbox/SentItems">
+                                        <i class="fa fa-paper-plane-o dropdown-icon "></i>
+                                        Sent items
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                My account
+                                <i class="mainnav-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/?activeTab=accountSettings">
+                                        <i class="fa fa-cogs dropdown-icon "></i>
+                                        Account settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/?activeTab=userProfile">
+                                        <i class="fa fa-edit dropdown-icon "></i>
+                                        Profile data
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/Profile/Index/Contact?activeTab=locations">
+                                        <i class="fa fa-location-arrow dropdown-icon "></i>
+                                        Locations
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/?activeTab=notifications">
+                                        <i class="fa fa-bell dropdown-icon "></i>
+                                        Notifications
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown ">
+
+                            <a href="http://www.just-get.com#faq" target="_blank">
+                                Help
+                            </a>
+                        </li>
+                        <li class="dropdown ">
+                            <a href="/Account/LogOut">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </div>
+
+        <div class="content container">
+
+
+
+            <div class="layout layout-main-right layout-stack-sm user-profile">
+
+                <div class="col-md-3 col-sm-4 layout-sidebar">
+
+                    <div class="nav-layout-sidebar-skip">
+                        <strong>Navigation</strong> / <a href="#settings-content">Skip to content</a>
+                    </div>
+                    <ul id="myTab" class="nav nav-layout-sidebar nav-stacked">
+                        <li class="">
+                            <a href="#accountSettings" data-toggle="tab">
+                                <i class="fa fa-cogs"></i>
+                                &nbsp;&nbsp;Account settings
+                            </a>
+                        </li>
+                        <li class="active in">
+                            <a href="#profile" data-toggle="tab">
+                                <i class="fa fa-edit"></i>
+                                &nbsp;&nbsp;Profile data
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Profile/Index/Contact?activeTab=locations">
+                                <i class="fa fa-location-arrow"></i>
+                                &nbsp;&nbsp;Locations
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Profile/Index/Contact?activeTab=additional">
+                                <i class="fa fa-phone"></i>
+                                &nbsp;&nbsp;Additional contacts
+
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#notifications" data-toggle="tab">
+                                <i class="fa fa-bullhorn"></i>
+                                &nbsp;&nbsp;Notifications
+
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#changePassword" data-toggle="tab">
+                                <i class="fa fa-user-secret"></i>
+                                &nbsp;&nbsp;Change password
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- /.col -->
+                <div class="col-md-9 col-sm-8 layout-main">
+                    <div id="settings-content" class="tab-content stacked-content">
+
+                        <div class="tab-pane fade active in" id="profile">
+                            <div class="heading-block">
+                                <h3>
+                                    Profile data
+                                </h3>
+                                <a class="pull-right" href="PublicProfile.html">View my profile as others see it</a>
+                            </div> <!-- /.heading-block -->
+
+
+                            <form action="/Profile/UserProfile" class="form-horizontal parsley-horizontal  parsley-form" enctype="multipart/form-data" method="post">
+                                <input name="__RequestVerificationToken" type="hidden" value="4ksdvRO54184xtO2yGJechiTuObe13zKfJI5IV7jOze5yQxudPmqmbsfUrfcXJh0QlqeKy7I9iZea5-zIzZaBk5Cer3EDtrUEG3YDQhV97c1" />    <div class="form-group">
+                                    <label class="col-md-3 control-label">
+                                        Trading name
+                                        <b class="text-danger">*</b>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input class="form-control text-box single-line" data-parsley-length="[3, 128]" data-val="true" data-val-maxlength="The field Name must be a string or array type with a maximum length of &#39;128&#39;." data-val-maxlength-max="128" id="Name" name="Name" required="true" type="text" value="" />
+                                    </div> <!-- /.col -->
+                                </div>
+                                <div class="form-group">
+
+                                    <label class="col-md-3 control-label">
+                                        Logo
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input type="file" id="avatar" name="avatarImage" />
+                                    </div> <!-- /.col -->
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">About you</label>
+                                    <div class="col-md-7">
+                                        <textarea class="form-control" cols="20" data-parsley-length="[0, 4000]" data-val="true" data-val-maxlength="The field Description must be a string or array type with a maximum length of &#39;4000&#39;." data-val-maxlength-max="4000" id="about-textarea" name="Description" rows="6">
+</textarea>
+                                    </div> <!-- /.col -->
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Company reg no</label>
+                                    <div class="col-md-7">
+                                        <input class="form-control text-box single-line" data-val="true" data-val-number="The field RegNo must be a number." id="RegNo" name="RegNo" type="number" value="" />
+                                    </div> <!-- /.col -->
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label">Luba avaldada</label>
+                                    <div class="col-md-7">
+                                        <label class="btn btn-default">
+                                            <input type="checkbox" name="PermissionToPublish" value="true" checked />
+                                            Permission to publish
+                                        </label>
+
+                                    </div> <!-- /.col -->
+                                </div>
+                                <script data-img-str="">
+
+            var imgStr = $(document.currentScript).data("img-str") ;
+
+            $(function() {
+
+                var options = {
+                    language: 'en',
+                    showUpload: false,
+                    showCancel: false,
+                    showRemove: false,
+                    allowedFileTypes: ['image'],
+                    minImageWidth: 300,
+                    minImageHeight: 300,
+                    maxFileSize: 1000,
+                    deleteUrl: '/Profile/DeleteAvatar'
+                };
+
+                if ( imgStr != undefined && imgStr.length > 200) {
+                    options.initialPreview = '<img src="data:image/gif;base64,' + imgStr + '" />';
+                }
+
+                $("#avatar").fileinput(options);
+
+            });
+
+                                </script>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <div class="col-md-7 col-md-push-3">
+                                        <button type="button" class="btn btn-primary" onclick="justGet.submitParsleyForm(this)">Save</button>
+                                        &nbsp;
+                                        <button type="reset" class="btn btn-default">Cancel</button>
+                                    </div> <!-- /.col -->
+                                </div>
+                                <!-- /.form-group -->
+                            </form>
+                        </div>
+                        <div class="tab-pane fade " id="notifications">
+
+                            <div class="heading-block">
+                                <h3>
+                                    Notifications
+                                </h3>
+                            </div>
+
+
+                            <form action="/Profile/NotificationSettings" class="form-horizontal" method="post">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Email</th>
+                                            <th>Mobile</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><label class="control-label">New tender</label></td>
+                                            <td>
+
+                                                <label class="btn btn-default">
+                                                    <input name="NotificationTypeNewTenderMail" type="checkbox" value="true" />
+
+                                                </label>
+
+                                            </td>
+                                            <td>
+
+                                                <label class="btn btn-default">
+                                                    <input name="NotificationTypeNewTenderMobile" type="checkbox" value="true" />
+
+                                                </label>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="control-label">Position closed</label></td>
+                                            <td>
+                                                <label class="btn btn-default">
+                                                    <input name="NotificationTypeClosedPositionMail" type="checkbox" value="true" />
+
+                                                </label>
+
+                                            </td>
+                                            <td>
+
+                                                <label class="btn btn-default">
+                                                    <input name="NotificationTypeClosedPositionMobile" type="checkbox" value="true" />
+
+                                                </label>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="control-label">New message</label></td>
+                                            <td>
+
+                                                <label class="btn btn-default">
+                                                    <input name="NotificationTypeNewCommentMail" type="checkbox" value="true" />
+
+                                                </label>
+
+                                            </td>
+                                            <td>
+
+                                                <label class="btn btn-default">
+                                                    <input name="NotificationTypeNewCommentMobile" type="checkbox" value="true" />
+
+                                                </label>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                                <div class="form-group">
+                                    <div class="col-md-7 col-md-push-3">
+                                        <button type="submit" class="btn btn-primary">Save</button>
+                                        &nbsp;
+                                        <button type="reset" class="btn btn-default">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="tab-pane fade " id="accountSettings">
+
+                            <div class="heading-block">
+                                <h3>
+                                    Account settings
+                                </h3>
+                            </div> <!-- /.heading-block -->
+                            <div class="alert alert-danger">
+                                Mobile is required for placing proposals
+                            </div>
+                            <div id="accountsettingsContainer">
+
+                                <form action="/Profile/AccountSettings?Length=7" autocomplete="false" class="form-horizontal  parsley-horizontal parsley-form" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#accountsettingsContainer" id="form0" method="post">
+                                    <input name="__RequestVerificationToken" type="hidden" value="MNWvkBbMPYT5NkPHgAuI60Ysabrd06Kg1fCXmb246UjKk6CCSwECZTok542zkJ71DPJvTSem02NqzR-q-luj46dBrkXrmb3Rkhaex53WN101" /><div class="validation-summary-valid text-danger" data-valmsg-summary="true">
+                                        <ul>
+                                            <li style="display:none"></li>
+                                        </ul>
+                                    </div>        <input type="text" class="fake-autofill" name="fakeusernameremembered" />
+                                    <input type="password" class="fake-autofill" name="fakepasswordremembered" />
+                                    <!-- /.form-group -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">
+                                            E-mail
+                                            <b class="text-danger">*</b>
+                                        </label>
+                                        <div class="col-md-7">
+                                            <input class="form-control text-box single-line" data-parsley-length="[6, 128]" data-val="true" data-val-email="E-mail address required." data-val-minlength="Minimum required length for Email field is 8" data-val-minlength-min="8" data-val-required="Field Email is required" id="Email" name="Email" required="true" type="email" value="chintanavailable@gmail.com" />
+                                        </div> <!-- /.col -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">
+                                            Mobile no
+                                            <b class="text-danger">*</b>
+                                        </label>
+                                        <div class="col-md-7">
+                                            <input class="form-control text-box single-line" data-parsley-range="[5000000, 59999999]" data-val="true" data-val-number="The field Mobile must be a number." data-val-range="The field Mobile must be between 5000000 and 59999999." data-val-range-max="59999999" data-val-range-min="5000000" id="Mobile" name="Mobile" placeholder="5012345" required="required" type="number" value="" />
+
+                                        </div> <!-- /.col -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Company VAT no</label>
+                                        <div class="col-md-7">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">EE</span>
+                                                <input class="form-control text-box single-line" data-val="true" data-val-number="The field VatNo must be a number." id="VatNo" name="VatNo" type="number" value="" />
+                                            </div>
+                                        </div> <!-- /.col -->
+                                    </div>
+                                    <!-- /.form-group -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">Name on the bank account</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control text-box single-line" data-parsley-length="[6, 128]" data-val="true" data-val-maxlength="The field IbanName must be a string or array type with a maximum length of &#39;128&#39;." data-val-maxlength-max="128" data-val-minlength="The field IbanName must be a string or array type with a minimum length of &#39;3&#39;." data-val-minlength-min="3" id="IbanName" name="IbanName" type="text" value="" />
+                                        </div> <!-- /.col -->
+                                    </div>
+                                    <!-- /.form-group -->
+                                    <!-- /.form-group -->
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label">IBAN</label>
+                                        <div class="col-md-7">
+                                            <input class="form-control ui-popover text-box single-line" data-content="For withdrawal from your account" data-original-title="Required" data-placement="top" data-toggle="tooltip" data-trigger="hover" data-val="true" data-val-maxlength="The field Iban must be a string or array type with a maximum length of &#39;20&#39;." data-val-maxlength-max="20" data-val-minlength="The field Iban must be a string or array type with a minimum length of &#39;20&#39;." data-val-minlength-min="20" id="Iban" name="Iban" pattern="^EE\d{18}$" placeholder="EE000000000000000000" type="text" value="" />
+                                        </div> <!-- /.col -->
+                                    </div>
+                                    <!-- /.form-group -->
+                                    <!-- /.form-group -->
+                                    <div class="form-group">
+                                        <div class="col-md-7 col-md-push-3">
+                                            <input type="button" class="btn btn-primary" onclick="justGet.submitParsleyForm(this)" value="Save" />
+                                        </div> <!-- /.col -->
+                                    </div>
+                                </form>
+                            </div>
+                            <script>
+    $(function () {
+        mvpready_helpers.initTooltips();
+        $(".fake-autofill").hide();
+
+        $(".user-type.btn-group label").click(function (e) {
+            $(".user-type.btn-group input").removeAttr("checked");
+            $(e.target).find("input").attr("checked", "checked");
+        });
+
+    });
+
+                            </script>
+                        </div>
+                        <div class="tab-pane fade " id="deposit">
+
+
+
+                            <div class="heading-block">
+                                <h3>
+                                    Escrow chintanavailable@gmail.com
+                                </h3>
+                            </div> <!-- /.heading-block -->
+
+                            <table class="table table-hover">
+                                <tr>
+                                    <th>When</th>
+                                    <th>Job description</th>
+                                    <th>Proposal</th>
+                                    <th>Transaction amount</th>
+                                </tr>
+
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Account balance
+                                    </th>
+                                    <th></th>
+                                    <th>€0.00</th>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <th>
+                                        Available funds
+                                    </th>
+                                    <th></th>
+                                    <th>€0.00</th>
+                                </tr>
+                            </table>
+                            <div class="heading-block">
+                                <h3>
+                                    External payments
+                                </h3>
+                            </div> <!-- /.heading-block -->
+                            <form action="/Deposit/Withraw" class="form-horizontal " method="post">
+                                <input name="__RequestVerificationToken" type="hidden" value="pfm420e6SWh83C8HyAws910j8OA6Yfz_CUT3V-Lj3jxiSKbSDXPvWkGsBcml_nlrodxOBzZ6RMhG-mKpi3hBcHnoLYyW2kC0YlGg6sgRaxM1" />    <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Transaction amount" name="Amount" id="depositAmount" type="number" value="0" />
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-euro"></i>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            Withrawal
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+
+                            <div id="depositModal" class="modal modal-styled fade ">
+
+                                <div class="modal-dialog">
+
+                                    <div class="modal-content">
+
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h3 class="modal-title">
+                                                Deposit
+                                            </h3>
+                                        </div> <!-- /.modal-header -->
+
+                                        <div class="modal-body">
+
+                                            <ul class="nav nav-tabs">
+                                                <li class="active">
+                                                    <a href="#SEB" onclick="$('#bankTo').val('SEB')" data-toggle="tab" aria-expanded="true">SEB</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#Swedbank" onclick="$('#bankTo').val('Swedbank')" data-toggle="tab" aria-expanded="true">Swedbank</a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="#LHV" onclick="$('#bankTo').val('LHV')" data-toggle="tab" aria-expanded="true">LHV</a>
+                                                </li>
+
+                                            </ul>
+
+
+                                            <div class="tab-content">
+
+
+                                                <div class="tab-pane fade active in" id="SEB">
+
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Recipient name</dt>
+                                                        <dd>Just-Get.com O&#220;</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Recipient account</dt>
+                                                        <dd>EE961010220250241227</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>SWIFT Code</dt>
+                                                        <dd>EEUHEE2X</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Reference</dt>
+                                                        <dd>chintanavailable@gmail.com</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Transaction amount</dt>
+                                                        <dd>
+                                                            <span style="padding-right:5px" class="depositModalAmount"></span>
+                                                            <i class="fa fa-euro"></i>
+                                                        </dd>
+                                                    </dl>
+                                                </div> <!-- /.tab-pane -->
+                                                <div class="tab-pane fade " id="Swedbank">
+
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Recipient name</dt>
+                                                        <dd>Just-Get.com O&#220;</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Recipient account</dt>
+                                                        <dd>EE802200221064101546</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>SWIFT Code</dt>
+                                                        <dd>HABAEE2X</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Reference</dt>
+                                                        <dd>chintanavailable@gmail.com</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Transaction amount</dt>
+                                                        <dd>
+                                                            <span style="padding-right:5px" class="depositModalAmount"></span>
+                                                            <i class="fa fa-euro"></i>
+                                                        </dd>
+                                                    </dl>
+                                                </div> <!-- /.tab-pane -->
+                                                <div class="tab-pane fade " id="LHV">
+
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Recipient name</dt>
+                                                        <dd>Just-Get.com O&#220;</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Recipient account</dt>
+                                                        <dd></dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>SWIFT Code</dt>
+                                                        <dd></dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Reference</dt>
+                                                        <dd>chintanavailable@gmail.com</dd>
+                                                    </dl>
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Transaction amount</dt>
+                                                        <dd>
+                                                            <span style="padding-right:5px" class="depositModalAmount"></span>
+                                                            <i class="fa fa-euro"></i>
+                                                        </dd>
+                                                    </dl>
+                                                </div> <!-- /.tab-pane -->
+
+                                            </div>
+                                        </div> <!-- /.modal-body -->
+
+                                        <div class="modal-footer">
+                                            <a href="http://www.swedbank.ee" class="btn btn-default">Swedbank</a>
+                                            <a href="http://www.seb.ee" class="btn btn-default">SEB</a>
+                                            <a href="http://www.danskebank.ee/" class="btn btn-default">Danskebank</a>
+                                            <a href="http://www.nordea.ee/" class="btn btn-default">Nordea</a>
+                                            <a href="http://www.krediidipank.ee/" class="btn btn-default">Krediidipank</a>
+                                            <a href="https://www.lhv.ee/" class="btn btn-default">LHV</a>
+                                            <hr />
+                                            <form action="/Deposit/ManualPaymentDone" method="post">
+                                                <input name="__RequestVerificationToken" type="hidden" value="Q0dAx4BbSkWqbjCzZMC021gqm8pIkExF8hpwneaQ-DXhve2QNVbGAAD-mTQKFX4SAJyn_n1vHc9OzjGM5kf3yOHmCHESQsg8iCN-EmOTJqE1" />                    <input type="hidden" name="bankTo" id="bankTo" value="SEB" />
+                                                <button class="btn btn-primary btn-block" type="submit">
+                                                    After the payment, click here
+                                                </button>
+                                            </form>
+                                        </div> <!-- /.modal-footer -->
+
+                                    </div> <!-- /.modal-content -->
+
+                                </div><!-- /.modal-dialog -->
+
+                            </div>
+
+                            <script>
+
+    var depositAmount;
+
+    function OpenModalDepositModal() {
+        $('#depositAmount').val(depositAmount);
+        if (depositAmount > 0) {
+            $('.depositModalAmount').html(depositAmount);
+            $('#depositModal').modal('show');
+        }
+    }
+
+    $(function () {
+        depositAmount = Math.round(Number($('#depositAmount').val()) * 100) / 100;
+        if (depositAmount == 0)
+            $("#depositButton").attr("disabled", "disabled");
+        else
+            OpenModalDepositModal();
+
+        $('#depositAmount').keyup(function (event) {
+            if (event.keyCode == 188 || event.keyCode == 190) return;
+            depositAmount = Math.round(Number(event.target.value) * 100) / 100;
+            event.target.value = depositAmount;
+
+            if (depositAmount == 0)
+                $("#depositButton").attr("disabled", "disabled");
+            else
+                $("#depositButton").removeAttr("disabled");
+        });
+
+    });
+
+                            </script>
+                        </div>
+                        <div class="tab-pane fade " id="changePassword">
+
+
+
+                            <div class="heading-block">
+                                <h3>
+                                    Change password
+                                </h3>
+                            </div> <!-- /.heading-block -->
+
+
+                            <form action="/Profile/ChangePassword" class="form-horizontal parsley-horizontal  parsley-form" method="post">
+                                <input name="__RequestVerificationToken" type="hidden" value="JNJgECTkigOvhOgBFN3zNzksreotzlUzAYpMgWA9Qx2nmYGIzcCY_SweVVE0YaVjwQLxncinDOpmCLxVFpvYfcWNknPpfTHd9o5TEvYBgyU1" /><div class="validation-summary-valid text-danger" data-valmsg-summary="true">
+                                    <ul>
+                                        <li style="display:none"></li>
+                                    </ul>
+                                </div>    <div class="form-group">
+
+                                    <label class="col-md-3 control-label">
+                                        New password
+                                        <b class="text-danger">*</b>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input autocomplete="off" class="form-control ui-popover" data-content="At least eight characters, including one capital letter and a number" data-original-title="Password rules" data-parsley-length="[8, 128]" data-placement="top" data-toggle="tooltip" data-trigger="hover" data-val="true" data-val-maxlength="The field Uus parool must be a string or array type with a maximum length of &#39;128&#39;." data-val-maxlength-max="128" data-val-minlength="The field Uus parool must be a string or array type with a minimum length of &#39;8&#39;." data-val-minlength-min="8" data-val-required="The Uus parool field is required." id="d3be4f50-d1ae-461d-ba4e-66da93616170" name="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required="true" type="password" />
+                                    </div> <!-- /.col -->
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+
+                                    <label class="col-md-3 control-label">
+                                        Confirm password
+                                        <b class="text-danger">*</b>
+                                    </label>
+                                    <div class="col-md-7">
+                                        <input autocomplete="off" class="form-control" data-parsley-equalto="#d3be4f50-d1ae-461d-ba4e-66da93616170" data-val="true" data-val-maxlength="The field Parool uuesti must be a string or array type with a maximum length of &#39;128&#39;." data-val-maxlength-max="128" data-val-minlength="The field Parool uuesti must be a string or array type with a minimum length of &#39;8&#39;." data-val-minlength-min="8" data-val-required="The Parool uuesti field is required." id="aa58d59a-60ee-4552-8df7-9ded87627189" name="Password2" required="true" type="password" />
+                                    </div> <!-- /.col -->
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <div class="col-md-7 col-md-push-3">
+                                        <button type="button" class="btn btn-primary" onclick="justGet.submitParsleyForm(this)">Save</button>
+                                        &nbsp;
+                                        <button type="reset" class="btn btn-default">Cancel</button>
+                                    </div> <!-- /.col -->
+                                </div>
+                                <!-- /.form-group -->
+                            </form>
+
+                        </div>
+                    </div> <!-- /.tab-content -->
+                </div>
+                <!-- /.col -->
+
+            </div> <!-- /.row -->
+
+            <script>
+
+
+    $(function() {
+
+        $('.parsley-form').submit(function (e) {
+            e.preventDefault();
+        });
+
+        $("form").keydown(function (ev) {
+            if (ev.which == 13 && ev.target.type != "textarea") {
+                justGet.submitParsleyForm(ev.target);
+            }
+
+        });
+    });
+
+            </script>
+
+
+        </div>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <footer class="footer">
+        <div class="container">
+
+            <p class="pull-left">
+                &copy; 2015 Just-Get.Com O&#220;, India
+            </p>
+            <p class="pull-right">
+                <a href="http://www.bitministry.com">
+                    <img src="/Content/_img/bitministry.png" />
+                </a>
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 8115501;
+
+	window.__lc.visitor = {
+	    name: '',
+		email: 'chintanavailable@gmail.com'
+	};
+	(function() {
+	  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	})();
+    </script>
+    <!-- End of LiveChat code -->
+
+</body>
+
+
+
+</html>

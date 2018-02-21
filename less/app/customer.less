@@ -1,0 +1,50 @@
+﻿@import "../skin/bootstrap/variables";
+@import "../skin/variables";
+@import "../skin/bootstrap/mixins/border-radius.less";
+
+
+
+.accordion-panel {
+    .panel {
+        border-color: @accordion-panel-border-color;
+    }
+
+    .panel-heading {
+        padding: 10px 15px !important;
+
+        .h5 {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .heading-dark {
+        color: @accordion-panel-color;
+        background-color: @accordion-panel-bg;
+    }
+
+
+    .panel.is-open {
+        border-color: @accordion-panel-active-border-color;
+
+        .heading-dark {
+            color: @accordion-panel-active-color;
+            background-color: @accordion-panel-active-bg;
+            .border-top-radius (4px);
+        }
+    }
+}
+
+.buyer-discussion-with-seller {
+    .popover{
+        max-width:none;
+    }
+    .popover-content {        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+        }
+    }
+}
