@@ -18,8 +18,38 @@
   width: 847px;
   height: 60px;
 }
+@font-face {
+  font-family: 'GothamPro';
+  src: url('../../fonts/GothamPro.eot?') format('eot'), url('../../fonts/GothamPro.otf') format('opentype'), url('../../fonts/GothamPro.woff') format('woff'), url('../../fonts/GothamPro.ttf') format('truetype'), url('../../fonts/GothamPro.svg#GothamPro') format('svg');
+}
 .user-profile {
-  background-color: #f1f2f6;
+  color: #ffffff;
+  font-family: 'GothamPro';
+}
+.user-profile .text-light-grey {
+  color: #aaa;
+}
+.user-profile .text-success {
+  color: #09b752;
+}
+.user-profile .text-danger {
+  color: #ff7680;
+}
+.user-profile label {
+  font-weight: 700;
+  color: black;
+}
+.user-profile .section-title {
+  display: block;
+  border-bottom: 1px solid;
+  font-size: 28px;
+  padding: 24px 0 12px;
+  margin-bottom: 16px;
+  font-family: GothamPro;
+  color: #344c5e;
+  font-size: 26px;
+  /* Approximation due to font substitution */
+  font-weight: 700;
 }
 .user-profile .krajee-default.file-preview-frame .kv-file-content {
   width: initial !important;
@@ -29,6 +59,61 @@
 .user-profile .krajee-default.file-preview-frame .file-drag-handle,
 .user-profile .krajee-default.file-preview-frame .kv-file-zoom {
   display: none;
+}
+.user-profile .media {
+  margin-bottom: 24px;
+}
+.user-profile .media-object {
+  display: inline-block;
+  background: #a49775;
+  border-radius: 50%;
+  width: 96px;
+  height: 96px;
+  margin-right: 16px;
+}
+.user-profile .panel-deliverables .panel {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.user-profile .panel-deliverables .panel-default > .panel-heading {
+  background: transparent;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+.user-profile .panel-deliverables .panel-title > a {
+  font-family: GothamPro;
+  color: #344c5e !important;
+  font-size: 14px;
+  /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: left;
+}
+.user-profile .panel-deliverables h4 {
+  font-family: GothamPro;
+  color: #344c5e!important;
+  font-size: 13px;
+  /* Approximation due to font substitution */
+  font-weight: 500;
+  text-align: left;
+}
+.user-profile .panel-deliverables .panel-body > .row {
+  margin-bottom: 16px;
+}
+.user-profile .panel-deliverables .panel-heading .accordion-toggle:after {
+  /* symbol for "opening" panels */
+  font-family: 'Glyphicons Halflings';
+  /* essential for enabling glyphicon */
+  float: right;
+  /* adjust as needed */
+  color: grey;
+  /* adjust as needed */
+  content: "\e113";
+}
+.user-profile .panel-deliverables .panel-heading .accordion-toggle.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
 }
 .user-profile .banner {
   background-image: url(../../../../images/banner.png?v=18022018);
@@ -41,68 +126,98 @@
   position: relative;
   top: -75px;
 }
-.user-profile .col-md-3 {
-  width: 292px !important;
-}
-.user-profile .col-md-9 {
-  width: 847px !important;
-}
-.user-profile .col-md-9 .container {
+.user-profile .col-lg-9 .container {
   top: 5px;
 }
-.user-profile .col-md-9 .mainnav {
-  top: 45px;
-  height: 60px;
+.user-profile .col-lg-9 .mainnav {
+  top: 75px;
+  height: 58px;
   border-radius: 5px;
-  margin-bottom: 55px;
+  margin-bottom: 85px;
+  background: transparent;
 }
 .user-profile .user-info {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
-  height: 219px;
-  padding: 10px 10px 10px 10px;
+  padding: 8px;
 }
-.user-profile .user-info div {
-  padding: 10px 10px 10px 10px;
+.user-profile .user-info .p8 {
+  padding: 7px;
 }
 .user-profile .user-info label {
   font-family: GothamPro !important;
 }
+.user-profile .user-info .user-title {
+  display: flex;
+}
 .user-profile .user-info .user-logo {
-  width: 60px;
+  width: 88px;
   height: 60px;
   background-image: url(../../../../images/logo.png?v=18022018);
   background-repeat: no-repeat;
   margin: 0px !important;
   display: inline-block;
   clear: left;
+  float: left;
+}
+.user-profile .user-info .name-section {
+  margin-left: 5px;
+  padding-left: 3px;
 }
 .user-profile .user-info .name {
   color: #344c5e;
   font-size: 18px;
   font-weight: 700;
   position: relative;
-  top: 16%;
-  left: 35%;
-  transform: translate(-50%, -100%);
+  vertical-align: middle;
+  margin-top: 5px;
 }
-.user-profile .user-info .description {
-  color: #6f6f6f;
-  font-size: 14px;
+.user-profile .user-info .star-rating {
+  font-family: FontAwesome5FreeSolid;
+  color: #b8b8b8;
+  font-size: 11px;
   /* Approximation due to font substitution */
   font-weight: 400;
   text-align: left;
 }
-.user-profile .user-info .user-action {
-  display: inline-block;
+.user-profile .user-info .star-rating .fa-star {
+  color: #ff7680;
+}
+.user-profile .user-info .rating-value {
   font-family: GothamPro;
   color: #ff7680;
   font-size: 13px;
   /* Approximation due to font substitution */
   font-weight: 500;
+  text-align: left;
+}
+.user-profile .user-info .description {
+  font-family: GothamPro;
+  color: #6f6f6f;
+  font-size: 13px;
+  /* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: left;
+}
+.user-profile .user-info .link {
+  font-family: GothamPro;
+  color: #178fd6;
+  font-size: 13px;
+  /* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: left;
+  margin-top: 15px;
+}
+.user-profile .user-info .user-action {
+  display: inline-block;
+  color: #ff7680;
+  font-size: 13px;
+  /* Approximation due to font substitution */
+  font-weight: 500;
   text-align: center;
+  margin-top: 20px;
 }
 .user-profile .user-info .user-action button {
   border-radius: 3px;
@@ -147,65 +262,6 @@
   position: relative;
   background: transparent;
 }
-.user-profile .user-info .user-action #btn-share .popover {
-  padding: 0;
-  border-radius: 0;
-  border: 0;
-  box-shadow: none;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content {
-  width: 234px;
-  height: 49px;
-  margin: 0;
-  padding: 0;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media {
-  width: 78px;
-  height: 49px;
-  line-height: 49px;
-  float: left;
-  color: #fff;
-  text-align: center;
-  background: #052536;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media.twitter {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media.google-plus {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media.facebook {
-  border-left: 1px solid #264356;
-  border-right: 1px solid #264356;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media.facebook:after {
-  position: absolute;
-  bottom: -10px;
-  margin-left: -21px;
-  content: "";
-  border-left: 11px solid transparent;
-  border-right: 11px solid transparent;
-  border-top: 10px solid #052536;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media:hover,
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media:focus {
-  background: #264356;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media:hover.facebook:after,
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media:focus.facebook:after {
-  border-top-color: #264356;
-}
-.user-profile .user-info .user-action #btn-share .popover .popover-content .btn-media i {
-  font-size: 30px;
-  line-height: 49px;
-}
-.user-profile .user-info .user-action .link {
-  width: 50%;
-  float: left;
-  text-align: center;
-}
 .user-profile .user-location {
   background-color: #ffffff;
   box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
@@ -238,32 +294,96 @@
   background-color: #ffffff;
   box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
   word-wrap: break-word;
-  margin-top: 25px;
+  width: 260px;
 }
-.user-profile .user-location .address label {
-  color: #9a9a9a;
+.user-profile .user-location .panel-group,
+.user-profile .user-location .panel-group .panel {
+  border: none !important;
+  margin-bottom: 0px !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+.user-profile .user-location .panel-body {
+  border: none !important;
+}
+.user-profile .user-location .panel-title {
+  font-family: GothamPro !important;
+  font-size: 10px;
+  /* Approximation due to font substitution */
+  line-height: 26px;
+  /* Approximation due to font substitution */
+  background-color: transparent;
+  border: none !important;
+  color: #344c5e;
+  font-weight: 700;
+  text-align: left;
+}
+.user-profile .user-location .panel-heading .accordion-toggle:before {
+  /* symbol for "opening" panels */
+  font-family: 'Glyphicons Halflings';
+  /* essential for enabling glyphicon */
+  float: left !important;
+  /* adjust as needed */
+  color: grey;
+  /* adjust as needed */
+  content: "\e113";
+}
+.user-profile .user-location .panel-heading .accordion-toggle {
+  color: #ff7680 !important;
+}
+.user-profile .user-location .panel-heading .accordion-toggle.collapsed {
+  color: grey !important;
+  /* adjust as needed */
+}
+.user-profile .user-location .panel-heading .accordion-toggle.collapsed:before {
+  /* symbol for "collapsed" panels */
+  content: "\e114";
+  /* adjust as needed, taken from bootstrap.css */
+}
+.user-profile .user-location #office-collapse-one > label {
+  font-family: GothamPro;
+  color: #000000;
+  font-size: 14px;
+  /* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: left;
+}
+.user-profile .user-location .panel-heading .panel-title > a {
+  text-decoration: none;
+  font-family: GothamPro !important;
+  color: #ff7680 !important;
+  font-size: 10px;
+  /* Approximation due to font substitution */
+  font-weight: 500;
+  line-height: 26px;
+  /* Approximation due to font substitution */
+  text-align: left;
+  background-color: transparent;
+  border: none !important;
+}
+.user-profile .user-location .panel-body {
+  padding: 0px;
+}
+.user-profile .user-location .fa {
+  color: #bababa;
+  font-size: 12px;
+  /* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: center;
 }
 .user-profile .user-location .col-xs-9 {
   padding-left: 26px;
   padding-bottom: 15px;
+  color: #9a9a9a;
 }
 .user-profile .user-location .phone {
   position: relative;
 }
-.user-profile .user-location .phone label {
-  color: #9a9a9a;
-}
 .user-profile .user-location .fax {
   position: relative;
 }
-.user-profile .user-location .fax label {
-  color: #9a9a9a;
-}
 .user-profile .user-location .website {
   position: relative;
-}
-.user-profile .user-location .website label {
-  color: #9a9a9a;
 }
 .user-profile .tags {
   position: relative;
@@ -293,7 +413,7 @@
   margin-top: 2%;
 }
 .user-profile .user-description {
-  font-family: Montserrat;
+  /*font-family: Montserrat;*/
   color: #6f6f6f;
   font-size: 14px;
   /* Approximation due to font substitution */
@@ -362,95 +482,12 @@
   margin: 0 auto;
   padding: 25px 25px 25px 25px;
 }
-.user-profile .user-description .multi-item-carousel .carousel-inner > .item {
-  transition: 500ms ease-in-out left;
-}
-.user-profile .user-description .multi-item-carousel .carousel-inner .active.left {
-  left: -50%;
-}
-.user-profile .user-description .multi-item-carousel .carousel-inner .active.right {
-  left: 50%;
-}
-.user-profile .user-description .multi-item-carousel .carousel-inner .next {
-  left: 50%;
-}
-.user-profile .user-description .multi-item-carousel .carousel-inner .prev {
-  left: -50%;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .user-profile .user-description .multi-item-carousel .carousel-inner > .item {
-    transition: 500ms ease-in-out left;
-    transition: 500ms ease-in-out all;
-    -webkit-backface-visibility: visible;
-            backface-visibility: visible;
-    transform: none !important;
-  }
-}
-.user-profile .user-description .multi-item-carousel .carouse-control.left,
-.user-profile .user-description .multi-item-carousel .carouse-control.right {
-  background-image: none;
-}
-.user-profile .user-description .multi-item-carousel .carousel-control {
-  border-radius: 50%;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 6px 0px rgba(134, 135, 135, 0.75);
-  width: 36px;
-  height: 36px;
-  opacity: unset;
-}
-.user-profile .user-description .multi-item-carousel .carousel-control > div {
-  background-color: #ffffff !important;
-  text-align: center;
-  vertical-align: middle;
-}
-.user-profile .user-description .multi-item-carousel .carousel-control.left {
-  background-image: none !important;
-  left: -4%;
-  top: 45%;
-}
-.user-profile .user-description .multi-item-carousel .carousel-control.right {
-  background-image: none !important;
-  right: -4%;
-  top: 45%;
-}
-.user-profile .user-description .multi-item-carousel .carousel-control .glyphicon-chevron-left,
-.user-profile .user-description .multi-item-carousel .carousel-control .glyphicon-chevron-right,
-.user-profile .user-description .multi-item-carousel .carousel-control .icon-next,
-.user-profile .user-description .multi-item-carousel .carousel-control .icon-prev {
-  width: 10px;
-  height: 10px;
-  margin: 0 auto !important;
-  font-size: 15px;
-  left: 30%;
-  top: 27%;
-  color: #ff7680;
-}
-.user-profile .user-description .multi-item-carousel .col-xs-6,
-.user-profile .user-description .multi-item-carousel .col-xs-12 {
-  height: 150px;
-}
-.user-profile .user-description .multi-item-carousel .gallary-content {
-  background-image: url(../../images/gallary1.png);
-  background-position: 50% 50%;
-  height: 178px;
-  width: 168px;
-  float: left;
-  margin-right: 10px;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.user-profile .user-description .multi-item-carousel .gallary-content .block {
-  height: 70px;
-  width: 50%;
-}
-.user-profile .user-description .multi-item-carousel .gallary-content .block-big {
-  height: 100px;
-  width: 100%;
-}
 .user-profile .user-description .team-pic > ul {
   margin: 0 auto !important;
 }
 .user-profile .user-description .team-pic > ul > li {
+  vertical-align: top;
+  text-align: center;
   width: 14%;
   height: 4%;
   margin-right: 5%;
@@ -459,7 +496,7 @@
 .user-profile h2 {
   width: 100%;
   text-align: left;
-  border-bottom: 1px solid #000 !important;
+  border-bottom: 1px solid #ccc !important;
   line-height: 0.1em !important;
   margin: 10px 0 20px !important;
 }
@@ -469,14 +506,11 @@
   font-size: 14px;
   /* Approximation due to font substitution */
   font-weight: 500;
-  width: 135px;
+  background: transparent;
 }
-.user-profile .mainnav-menu > li.active > a {
-  color: #ff7680 !important;
-  border-bottom: 2px solid #ff7680 !important;
-}
-.user-profile .mainnav-menu > li > a:hover {
-  background-color: #ffffff !important;
+.user-profile .mainnav-menu > li > a .fa {
+  font-size: 18px;
+  margin-right: 4px;
 }
 .user-profile .img-thumbnail {
   background-color: transparent !important;
@@ -485,5 +519,6 @@
 .user-profile .reference > ul > li {
   text-align: center;
   margin-left: 15px;
-  margin-right: 64px;
+  margin-right: 62px;
+  margin-bottom: 16px;
 }

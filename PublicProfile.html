@@ -1,33 +1,23 @@
 ﻿
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 
-
 <head>
     <title>Profile</title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta property="fb:app_id" content="" />
-
     <meta property="og:url" content="https://just-get.com/?activeTab=userProfile" />
     <meta property="og:type" content="website" />
     <meta property="og:description" name="description" content="Any service, any time!" />
     <meta property="og:image" content="http://www.just-get.com/skin/1200-en.png" />
-
     <meta property="og:title" content="Profile data" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Profile data" />
     <meta name="twitter:image" content="http://www.just-get.com/skin/1200-en.png" />
     <meta name="twitter:description" content="Any service, any time!" />
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
-
-
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
@@ -47,9 +37,6 @@
     <link href="/less/app/subscriptions.min.css" rel="stylesheet" />
 
 
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -66,9 +53,7 @@
     <script src="https://just-get.com/api/CDN/Script/Vendor/jquery.unobtrusive-ajax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
-
     <script src="https://just-get.com/Source/JsTranslation?cultureInfo=en-GB.js"></script>
-
 
     <script>
 
@@ -79,12 +64,10 @@
         });
 
     </script>
-
     <script src="https://just-get.com/api/CDN/Script/get-location.js"></script>
     <script src="https://just-get.com/api/CDN/Script/helpers.js"></script>
     <script src="https://just-get.com/api/CDN/Script/justGet.js"></script>
     <script src="https://just-get.com/api/CDN/Script/appInsights.js"></script>
-
 
     <link rel="shortcut icon" href="/favicon/32.ico">
     <link rel="apple-touch-icon" sizes="57x57" href="/favicon/57.png">
@@ -101,23 +84,17 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon/96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/16.png">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-
 </head>
-
 <body>
-
     <div id="wrapper">
         <!--Header-->
         <header class="navbar" role="banner">
-
             <div class="container">
-
                 <div class="navbar-header hidden-xs">
                     <a href="http://www.just-get.com" class="navbar-brand navbar-brand-img">
                         <img src="/images/logo-vertical-black.png" style="height:50px;" />
                     </a>
                 </div>
-
                 <nav class="navbar-collapse" role="navigation">
                     <div class="navbar-header fullscreen pull-left" style="display: none;">
                         <button class="btn btn-tertiary" onclick="window.history.back()">
@@ -126,24 +103,20 @@
                         <button class="btn btn-tertiary" onclick="location.reload()">
                             <i class="fa fa-refresh"></i>
                         </button>
-
                     </div>
                     <ul class="nav navbar-nav navbar-left">
-
                         <li class="dropdown navbar-notification">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-envelope navbar-notification-icon"></i>
                                 <span class="visible-xs-inline">&nbsp;Messages</span>
                             </a>
                         </li>
-
                         <li class="dropdown navbar-notification">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-bell navbar-notification-icon"></i>
                                 <span class="visible-xs-inline">&nbsp;Notifications</span>
                             </a>
                         </li>
-
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
@@ -153,17 +126,14 @@
                                     <span>Service provider</span>
                                 </span>
                                 <ul class="dropdown">
-
                                     <li>
                                         <a href="/Account/ChangeRole" class="hover-opt">
                                             <i class="fa fa-shopping-cart"></i>
                                             <span>Client</span>
                                         </a>
                                     </li>
-
                                 </ul>
                             </div>
-
                         </li>
                         <li>
                             <div class="pull-right">
@@ -193,87 +163,135 @@
                                         </li>
                                     </ul>
                                 </div>
-
                             </div>
-
                         </li>
                     </ul>
-
                 </nav>
-
             </div>
-
         </header>
-
         <!--End Header-->
         <!--profile-->
         <div class="user-profile">
             <!-- page banner-->
             <div class="banner">
-
             </div>
             <!--End page banner-->
             <!--page content-->
             <div class="content container">
-
                 <!--Side bar-->
-                <div class="col-md-3 col-sm-4 pull-left left-menu">
+                <div class="col-xs-12 col-lg-3 pull-left left-menu">
                     <div class="user-info">
-                        <div class="user-title">
-                            <div class="user-logo"></div>
-                            <label class="name">Blazed Bar & Grill</label>
-                        </div>
-                        <div class="description">
-                            Blazed Bar and Grill - if you don't lick your fingers,enjoy only half!
-                        </div>
-                        <div class="user-action">
-                            <button class="pull-left">SEND A MESSAGE</button>
-                            <div class="share pull-right">
-                                <a><i class="fa fa-share-alt"></i></a>
-                                <a><i class="glyphicon glyphicon-bookmark"></i></a>
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-lg-12">
+                                <div class="user-title p8">
+                                    <div class="user-logo p8"></div>
+                                    <div class="name-section pull-right">
+                                        <label class="name pull-left">Blazed Bar & Grill</label>
+                                        <div class="star-rating pull-left">
+                                            <span class="fa fa-star" data-rating="1"></span>
+                                            <span class="fa fa-star" data-rating="2"></span>
+                                            <span class="fa fa-star" data-rating="3"></span>
+                                            <span class="fa fa-star" data-rating="4"></span>
+                                            <span class="fa fa-star-o" data-rating="5"></span>
+                                            <input type="hidden" name="whatever1" class="rating-value" value="4">
+                                            <span class="rating-value">4/5</span>
+                                        </div>
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visible-lg col-lg-12">
+                                <div class="description p8">
+                                    Blazed Bar and Grill - if you don't lick your fingers,enjoy only half!
+                                </div>
+                                <div class="link">www.blazedbarandgrill.com</div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-lg-12">
+                                <div class="user-action p8">
+                                    <div class="share pull-right">
+                                        <a><i class="fa fa-share-alt"></i></a>
+                                        <a><i class="glyphicon glyphicon-bookmark"></i></a>
+                                    </div>
+                                    <button class="pull-right">SEND A MESSAGE</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="user-location">
                         <div id="map" class="map"></div>
                         <div class="navigator"></div>
-                        <div class="address">
-                            <div class="col-xs-8 pull-left">
-                                <i class="fa fa-map-marker"></i>&nbsp;<label>ADDRESS</label>
+                        <div class="panel-group">
+                            <div class="panel ">
+                                <div class="panel-heading" role="tab" id="office-one">
+                                    <h6 class="panel-title">
+                                        <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-one" aria-expanded="true" aria-controls="office-collapse-one">
+                                            NAME OF THE OFFICE
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="office-collapse-one" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="office-one" aria-expanded="true">
+                                    <div class="panel-body">
+                                        <div class="address">
+                                            <div class="col-xs-8 pull-left">
+                                                <i class="fa fa-map-marker pull-left"></i>&nbsp;<label class="pull-right">
+                                                    2701 Lombard St
+                                                    San Francisco, CA 94123
+                                                    b/t Baker St and Lyon St
+                                                    Marina/Cow Hollow
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="phone">
+                                            <div class="col-xs-8 pull-left">
+                                                <i class="fa fa-phone"></i>&nbsp;<label>093 675 324</label>
+                                            </div>
+
+                                        </div>
+                                        <div class="fax">
+                                            <div class="col-xs-8 pull-left">
+                                                <i class="fa fa-fax"></i>&nbsp;<label>093 675 324</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-9">
-                                2701 Lombard St
-                                San Francisco, CA 94123
-                                b/t Baker St and Lyon St
-                                Marina/Cow Hollow
+
+                            <div class="panel ">
+                                <div class="panel-heading" role="tab" id="office-two">
+                                    <h6 class="panel-title">
+                                        <a role="button" class="accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#office-collapse-two" aria-expanded="false" aria-controls="office-collapse-two">
+                                            NAME OF THE OFFICE
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="office-collapse-two" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="office-two" aria-expanded="false">
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel ">
+                                <div class="panel-heading" role="tab" id="office-3">
+                                    <h6 class="panel-title">
+                                        <a role="button" class="accordion-toggle " data-toggle="collapse" data-parent="#accordion" href="#office-collapse-3" aria-expanded="false" aria-controls="office-collapse-3">
+                                            NAME OF THE OFFICE
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="office-collapse-3" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="office-3" aria-expanded="false">
+                                    <div class="panel-body">
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="phone">
-                            <div class="col-xs-8 pull-left">
-                                <i class="fa fa-phone"></i>&nbsp;<label>PHONE</label>
-                            </div>
-                            <div class="col-xs-9">
-                                093 675 324
-                            </div>
-                        </div>
-                        <div class="fax">
-                            <div class="col-xs-8 pull-left">
-                                <i class="fa fa-fax"></i>&nbsp;<label>FAX</label>
-                            </div>
-                            <div class="col-xs-9">
-                                093 675 324
-                            </div>
-                        </div>
-                        <div class="website">
-                            <div class="col-xs-8 pull-left">
-                                <i class="fa fa-phone"></i>&nbsp;<label>WEBSITE</label>
-                            </div>
-                            <div class="col-xs-9">
-                                www.blazedbarandgrill.com
-                            </div>
-                        </div>
+                       
                     </div>
                     <div class="tags">
                         <span class="tag">restaurant</span>
@@ -283,49 +301,45 @@
                         <span class="tag">pub</span>
                     </div>
                 </div>
-
                 <!--End side bar-->
                 <!-- Content-->
-                <div class="col-md-9 col-sm-8 pull-right">
-
+                <div class="col-xs-12 col-lg-9 pull-right">
                     <div class="mainnav">
-
                         <div class="container">
                             <a class="mainnav-toggle" data-toggle="collapse" data-target=".mainnav-collapse">
                                 <span class="sr-only">ToggleNavigation</span>
                                 <i class="fa fa-bars"></i>
                             </a>
                             <nav class="collapse mainnav-collapse" role="navigation">
-
                                 <ul class="mainnav-menu nav navbar-nav">
                                     <li class="active">
-                                        <a href="#description">
-                                            <i class="glyphicon glyphicon-file"></i>
-                                            DESCRIPTION
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#services">
-                                            <i class="glyphicon glyphicon-list"></i>
-                                            SERVICES
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#gallery">
-                                            <i class="glyphicon glyphicon-picture"></i>
-                                            GALLERY
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#promo">
-                                            <i class="glyphicon glyphicon-star"></i>
-                                            PROMO
+                                        <a href="#about">
+                                            <i class="fa fa-home"></i>
+                                            ABOUT
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#staff">
-                                            <i class="glyphicon glyphicon-user"></i>
+                                            <i class="fa fa-users"></i>
                                             STAFF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#promo">
+                                            <i class="fa fa-star"></i>
+                                            PROMO
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#deliverables">
+                                            <i class="fa fa-list"></i>
+                                            DELIVERABLES
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#reviews">
+                                            <i class="fa fa-comments"></i>
+                                            REVIEWS
                                         </a>
                                     </li>
                                 </ul>
@@ -333,88 +347,104 @@
                         </div>
                     </div>
                     <div id="settings-content" class="tab-content stacked-content user-description">
-                        <div id="description" class="panel panel-default">
-                            <div class="panel-heading">
-                                <label>DESCRIPTION</label>
+                        <div id="about" class="row">
+                            <div class="col-xs-12">
+                                <label class="section-title">ABOUT</label>
                             </div>
-                            <div class="panel-body">
-                                <div class="content">
-                                    It is a long established fact that reader will be distracted by the readable content of a page when looking at its layout.
-                                    The point of using lorem ipsum is that it has a more-or-less normal distribution of letters. as opposed to using content here.
-                                    making it look like readable English. Various versions have evolved over the years sometimes by accident, somtime on purpose.<br />
-                                    Its is a long the blished fact that reader will be distracted by the readable content of a page when looking at its layout. the point
-                                    of using lorem ipsum.
-                                </div>
-                                <div class="demo">
-                                    <iframe width="420" height="215"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <iframe width="100%" height="215"
+                                                src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        It is a long established fact that reader will be distracted by the readable content of a page when looking at its layout.
+                                        The point of using lorem ipsum is that it has a more-or-less normal distribution of letters. as opposed to using content here.
+                                        making it look like readable English. Various versions have evolved over the years sometimes by accident, somtime on purpose.<br />
+                                        Its is a long the blished fact that reader will be distracted by the readable content of a page when looking at its layout. the point
+                                        of using lorem ipsum.
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-
-                        <div id="services" class="panel panel-default">
-                            <div class="panel-heading">
-                                <label>SERVICES</label>
-                                <div class="thumbnail-view">
-                                    <a class=""> <i class="glyphicon glyphicon-th-list"></i></a>
-                                    <a class="active"> <i class="glyphicon glyphicon-th-large"></i></a>
-                                </div>
+                        <div id="staff" class="row">
+                            <div class="col-xs-12">
+                                <label class="section-title">STAFF</label>
                             </div>
-                            <div class="panel-body">
-                                <div class="form-group service-pic">
+                            <div class="col-xs-12">
+                                <div class="team-pic">
                                     <ul class="list-inline">
                                         <li>
                                             <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/service1.png"><br>
-                                                Name of Service
+                                                <img class="img-thumbnail" src="/images/staff1.png"><br>
+                                                <label>Alex Dowtein</label><br />
+                                                <span class="text-light-grey">PR Manager</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" data-slide-to="1">
-                                                <img class="img-thumbnail" src="/images/service2.png"><br>
-                                                Name of Service
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff2.png"><br>
+                                                <label>Alexa Midtown</label><br />
+                                                <span class="text-light-grey">Sales Manager</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" data-slide-to="2">
-                                                <img class="img-thumbnail" src="/images/service3.png"><br>
-                                                Name of Service
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff3.png"><br>
+                                                <label>Damian Titors</label><br />
+                                                <span class="text-light-grey">Position</span>
                                             </a>
                                         </li>
                                         <li data-toggle="modal" data-target="#myModal">
                                             <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/service4.png"><br>
-                                                Name of Service
+                                                <img class="img-thumbnail" src="/images/staff4.png"><br>
+                                                <label>Brendon Shpiel</label><br />
+                                                <span class="text-light-grey">Position</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" data-slide-to="1">
-                                                <img class="img-thumbnail" src="/images/service5.png"><br>
-                                                Name of Service
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff5.png"><br>
+                                                <label>Alexa Midtown</label><br />
+                                                <span class="text-light-grey">Sales Manager</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" data-slide-to="2">
-                                                <img class="img-thumbnail" src="/images/service6.png"><br>
-                                                Name of Service
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff6.png"><br>
+                                                <label>Maria Phenix</label><br />
+                                                <span class="text-light-grey">Op Manager</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff7.png"><br>
+                                                <label>Olga Kellers</label><br />
+                                                <span class="text-light-grey">Position</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff8.png"><br>
+                                                <label>Damian Titors</label><br />
+                                                <span class="text-light-grey">Position</span>
                                             </a>
                                         </li>
                                         <!--end of thumbnails-->
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
-
-                        <div id="promo" class="panel panel-default">
-                            <div class="panel-heading">
-                                <label>PROMOTIONS</label>
+                        <div id="promo">
+                            <div>
+                                <label class="section-title">PROMO</label>
                             </div>
-                            <div class="panel-body">
+                            <div>
                                 <div class="row">
-                                    <div class="col-md-6 promo-pic"></div>
-                                    <div class="col-md-6 ">
+                                    <div class="col-md-6">
+                                        <div class="promo-pic"></div>
+                                    </div>
+                                    <div class="col-md-6">
                                         <div class="promo-content">
                                             <label>COME FOR THE GRILL...STAY FOR THE THRILL!</label>
                                             <p>If user has something to promot, he can do it in this section. Sure it is Optional</p>
@@ -432,144 +462,153 @@
                                             <a href="#">www.webaddress.com</a>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 promo-pic-2"></div>
+                                    <div class="col-md-6">
+                                        <div class="promo-pic-2"></div>
+                                    </div>
                                 </div>
-
                             </div>
-
                         </div>
-
-                        <div id="gallery" class="panel panel-default">
-                            <div class="panel-heading">
-                                <label>GALLARY</label>
+                        <div id="deliverables">
+                            <div>
+                                <label class="section-title">DELIVERABLES</label>
                             </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="carousel slide multi-item-carousel" id="theCarousel">
-                                            <div class="carousel-inner">
-                                                <div class="item active">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <div class="item">
-                                                    <div class="gallary-content"></div>
-                                                </div>
-                                                <!-- add more items here -->
-                                                <!-- Example item start: -->
-
-                                                <div class="item">
-                                                    <div class="col-xs-4">
-                                                        <a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a>
+                            <div>
+                                <div class="panel-group panel-deliverables" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Category Name 
+                                                </a>
+                                                
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
                                                     </div>
                                                 </div>
-
-                                                <!-- Example item end -->
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="left carousel-control" href="#theCarousel" data-slide="prev">
-                                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Category Name
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                ...
                                             </div>
-                                            <div class="right carousel-control" href="#theCarousel" data-slide="next">
-                                                <i class="glyphicon glyphicon-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Category Name
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                ...
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-                        <div id="staff" class="panel panel-default">
-                            <div class="panel-heading">
-                                <label>STAFF</label>
+                        <div id="reviews">
+                            <div>
+                                <label class="section-title">REVIEWS</label>
                             </div>
-                            <div class="panel-body">
-                                <div class="team-pic">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff1.png"><br>
-                                                <label>Alex Dowtein</label><br />
-                                                PR Manager
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff2.png"><br>
-                                                <label>Alexa Midtown</label><br />
-                                                Sales Manager
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff3.png"><br>
-                                                <label>Damian Titors</label><br />
-                                                Position
-                                            </a>
-                                        </li>
-                                        <li data-toggle="modal" data-target="#myModal">
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff4.png"><br>
-                                                <label>Brendon Shpiel</label><br />
-                                                Position
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff5.png"><br>
-                                                <label>Alexa Midtown</label><br />
-                                                Sales Manager
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff6.png"><br>
-                                                <label>Maria Phenix</label><br />
-                                                Op Manager
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff7.png"><br>
-                                                <label>Olga Kellers</label><br />
-                                                Position
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" data-slide-to="0">
-                                                <img class="img-thumbnail" src="/images/staff8.png"><br>
-                                                <label>Damian Titors</label><br />
-                                                Position
-                                            </a>
-                                        </li>
-                                        <!--end of thumbnails-->
-                                    </ul>
+                            <div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <span class="media-object"></span>
+                                            <!--use image if exist with same class-->
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff</h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><span class="media-object"></span></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff</h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><span class="media-object"></span></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff</h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><span class="media-object"></span></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff</h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div> <!-- /.tab-content -->
                 </div>
@@ -585,45 +624,37 @@
                 <div class="row reference">
                     <ul class="list-inline">
                         <li>
-
                             <img class="img-thumbnail" src="/images/cmp1.png"><br>
                             <label>Name of Company</label><br />
-                            slogan/motto/small
+                            <span class="text-light-grey">slogan/motto/small</span>
                         </li>
                         <li>
-
                             <img class="img-thumbnail" src="/images/cmp2.png"><br>
                             <label>Name of Company</label><br />
-                            slogan/motto/small
+                            <span class="text-light-grey">slogan/motto/small</span>
                         </li>
                         <li>
-
                             <img class="img-thumbnail" src="/images/cmp3.png"><br>
                             <label>Name of Company</label><br />
-                            slogan/motto/small
+                            <span class="text-light-grey">slogan/motto/small</span>
                         </li>
                         <li>
-
                             <img class="img-thumbnail" src="/images/cmp4.png"><br>
                             <label>Name of Company</label><br />
-                            slogan/motto/small
+                            <span class="text-light-grey">slogan/motto/small</span>
                         </li>
                         <li>
-
                             <img class="img-thumbnail" src="/images/cmp5.png"><br>
                             <label>Name of Company</label><br />
-                            slogan/motto/small
+                            <span class="text-light-grey">slogan/motto/small</span>
                         </li>
                         <!--end of thumbnails-->
                     </ul>
                 </div>
                 <!--End Reference-->
             </div>
-
             <!-- End page content -->
-
         </div>
-
         <!--End profile -->
         <script>
 
@@ -641,7 +672,7 @@
 
                 });
 
-             
+
             });
 
         </script>
@@ -659,70 +690,24 @@
                 });
             }
 
-            // Instantiate the Bootstrap carousel
-            $('.multi-item-carousel').carousel({
-                interval: false
-            });
 
-            // for every slide in carousel, copy the next slide's item in the slide.
-            // Do the same for the next, next item.
-            $('.multi-item-carousel .item').each(function () {
-                var next = $(this).next();
-                if (!next.length) {
-                    next = $(this).siblings(':first');
-                }
-                for (var i = 0; i < 2; i++) {
-                    next.children(':first-child').clone().appendTo($(this));
-                }
-
-
-                if (next.next().length > 0) {
-                    next.next().children(':first-child').clone().appendTo($(this));
-                } else {
-                    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-                }
-            });
 
             $(".nav a").on("click", function () {
                 $(".nav").find(".active").removeClass("active");
                 $(this).parent().addClass("active");
             });
 
-            var $sidebar = $(".left-menu"),
-                $window = $(window),
-                offset = $sidebar.offset(),
-                topPadding = 15,
-                reference = $(".reference").offset().top;
 
-            $window.scroll(function () {
-                if (($window.scrollTop() + ($sidebar.height() / 1.7)) <= reference) {
-                    if ($window.scrollTop() > offset.top) {
-                        $sidebar.stop().animate({
-                            marginTop: $window.scrollTop() - offset.top + topPadding
-                        });
-                    } else {
-                        $sidebar.stop().animate({
-                            marginTop: 0
-                        });
-                    }
-                }
-
-            });
         </script>
-
 
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAlb992cRYzvfz5mPU29pG4Al7WS3EPcY&callback=initMap">
 
         </script>
-
     </div>
-
     <br /><br /><br /><br />
-
     <footer class="footer">
         <div class="container">
-
             <p class="pull-left">
                 &copy; 2015 Just-Get.Com O&#220;, India
             </p>
@@ -731,12 +716,8 @@
                     <img src="/images/bitministry.png" />
                 </a>
             </p>
-
         </div>
     </footer>
-
-
-
 
 
 
@@ -756,9 +737,6 @@
         })();
     </script>
     <!-- End of LiveChat code -->
-
 </body>
-
-
 
 </html>
