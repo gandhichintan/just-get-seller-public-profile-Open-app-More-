@@ -2,716 +2,978 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-  <title>Profile</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="fb:app_id" content="" />
-  <meta property="og:url" content="https://just-get.com/?activeTab=userProfile" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" name="description" content="Any service, any time!" />
-  <meta property="og:image" content="http://www.just-get.com/skin/1200-en.png" />
-  <meta property="og:title" content="Profile data" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Profile data" />
-  <meta name="twitter:image" content="http://www.just-get.com/skin/1200-en.png" />
-  <meta name="twitter:description" content="Any service, any time!" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
+    <title>Profile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="fb:app_id" content="" />
+    <meta property="og:url" content="https://just-get.com/?activeTab=userProfile" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" name="description" content="Any service, any time!" />
+    <meta property="og:image" content="http://www.just-get.com/skin/1200-en.png" />
+    <meta property="og:title" content="Profile data" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Profile data" />
+    <meta name="twitter:image" content="http://www.just-get.com/skin/1200-en.png" />
+    <meta name="twitter:description" content="Any service, any time!" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.6/css/fileinput.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://just-get.com/api/cdn/css/general.css" />
-  <link href="/less/skin/skin.min.css" rel="stylesheet" />
-  <link href="/less/app/general.min.css" rel="stylesheet" />
-  <link href="/less/app/customer.min.css" rel="stylesheet" />
-  <link href="/less/app/mailbox.min.css" rel="stylesheet" />
-  <link href="/less/app/proposal.min.css" rel="stylesheet" />
-  <link href="/less/app/user-profile.min.css" rel="stylesheet" />
-  <link href="/less/app/subscriptions.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.6/css/fileinput.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://just-get.com/api/cdn/css/general.css" />
+    <link href="/less/skin/skin.min.css" rel="stylesheet" />
+    <link href="/less/app/general.min.css" rel="stylesheet" />
+    <link href="/less/app/customer.min.css" rel="stylesheet" />
+    <link href="/less/app/mailbox.min.css" rel="stylesheet" />
+    <link href="/less/app/proposal.min.css" rel="stylesheet" />
+    <link href="/less/app/user-profile.min.css" rel="stylesheet" />
+    <link href="/less/app/subscriptions.min.css" rel="stylesheet" />
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-  <script src="https://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.6/js/fileinput.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
-  <script src="https://just-get.com/api/CDN/Script/obj.assign.js"></script>
-  <script src="https://just-get.com/api/CDN/Script/Vendor/jquery.unobtrusive-ajax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
-  <script src="https://just-get.com/Source/JsTranslation?cultureInfo=en-GB.js"></script>
-  <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/parsley.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.6/js/fileinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap-wizard/1.2/jquery.bootstrap.wizard.min.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/obj.assign.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/Vendor/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script src="https://just-get.com/Source/JsTranslation?cultureInfo=en-GB.js"></script>
+    <script>
 
-    window.bitMin = window.bitMin || {};
+        window.bitMin = window.bitMin || {};
 
-    Object.assign(window.bitMin, {
-      viewData: { "appInsightsInstrumentationKey": "", "cultureInfo": "en-GB" },
-    });
-
-  </script>
-  <script src="https://just-get.com/api/CDN/Script/get-location.js"></script>
-  <script src="https://just-get.com/api/CDN/Script/helpers.js"></script>
-  <script src="https://just-get.com/api/CDN/Script/justGet.js"></script>
-  <script src="https://just-get.com/api/CDN/Script/appInsights.js"></script>
-  <link rel="shortcut icon" href="/favicon/32.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/16.png">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        Object.assign(window.bitMin, {
+            viewData: { "appInsightsInstrumentationKey": "", "cultureInfo": "en-GB" },
+        });
+       
+    </script>
+    <script src="https://just-get.com/api/CDN/Script/get-location.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/helpers.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/justGet.js"></script>
+    <script src="https://just-get.com/api/CDN/Script/appInsights.js"></script>
+    <link rel="shortcut icon" href="/favicon/32.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/16.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 </head>
 <body>
-  <div id="wrapper">
-    <!--Header-->
-    <header class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="http://www.just-get.com" class="navbar-brand navbar-brand-img">
-            <img src="/images/logo-header.png" style="height:50px;" />
-          </a>
-        </div>
-        <div id="navbar1" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-left visible-lg">
-            <li class="header-quote">Any service at the best price, reliable, convenient and fast</li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <form class="search-bar">
-                <input type="text" class="form-control" placeholder="Your wish is my command!" />
-                <button class="search-btn"><em class="fa fa-search"></em></button>
-              </form>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=et-EE">
-                    <span>eesti</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=fi-FI">
-                    <span>suomi</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=ru-RU">
-                    <span>русский</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" class="login-menu">
-                <em class="fa fa-user"></em>
-                LOGIN
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <nav id="navbar" class="nav-menu navbar-collapse collapse">
-      <div class="container">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Real Estate</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Sport, Health, Beauty</a></li>
-          <li><a href="#">Family &amp; Training</a></li>
-          <li><a href="#">Vehicles</a></li>
-          <li><a href="#">Leisure</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!--End Header-->
-    <!--profile-->
-    <div class="user-profile">
-      <!-- page banner-->
-      <div class="banner">
-      </div>
-      <!--End page banner-->
-      <!--page content-->
-      <div class="content container">
-        <!--Side bar-->
-        <div class="col-xs-12 col-lg-3 pull-left left-menu">
-          <div class="user-info">
-            <div class="row">
-              <div class="col-xs-6 col-sm-6 col-lg-12">
-                <div class="user-title p8">
-                  <div class="user-logo p8"></div>
-                  <div class="name-section pull-right">
-                    <label class="name pull-left">Blazed Bar & Grill</label>
-                    <div class="star-rating pull-left">
-                      <span class="fa fa-star" data-rating="1"></span>
-                      <span class="fa fa-star" data-rating="2"></span>
-                      <span class="fa fa-star" data-rating="3"></span>
-                      <span class="fa fa-star" data-rating="4"></span>
-                      <span class="fa fa-star-o" data-rating="5"></span>
-                      <input type="hidden" name="whatever1" class="rating-value" value="4">
-                      <span class="rating-value">4/5</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="visible-lg col-lg-12">
-                <div class="description p8">
-                  Blazed Bar and Grill - if you don't lick your fingers,enjoy only half!
-                </div>
-                <div class="link">www.blazedbarandgrill.com</div>
-              </div>
-              <div class="col-xs-6 col-sm-6 col-lg-12">
-                <div class="user-action p8">
-                  <div class="share pull-right">
-                    <a><i class="fa fa-share-alt"></i></a>
-                    <a><i class="glyphicon glyphicon-bookmark"></i></a>
-                  </div>
-                  <button class="pull-right">SEND A MESSAGE</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="user-location">
-            <div class="row">
-              <div class="col-xs-12 col-sm-6 col-lg-12">
-                <div id="map" class="map"></div>
-                <div class="navigator"></div>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-lg-12">
-                <div class="panel-group">
-                  <div class="panel ">
-                    <div class="panel-heading" role="tab" id="office-one">
-                      <h6 class="panel-title">
-                        <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-one" aria-expanded="true" aria-controls="office-collapse-one">
-                          NAME OF THE OFFICE
-                        </a>
-                      </h6>
-                    </div>
-                    <div id="office-collapse-one" class="panel-collapse collapse in" role="tabpanel"
-                         aria-labelledby="office-one" aria-expanded="true">
-                      <div class="panel-body">
-                        <div class="address">
-                          <div class="col-xs-8 pull-left flex">
-                            <i class="fa fa-map-marker pull-left"></i>&nbsp;<label class="pull-right">
-                              2701 Lombard St
-                              San Francisco, CA 94123
-                              b/t Baker St and Lyon St
-                              Marina/Cow Hollow
-                            </label>
-                          </div>
-                        </div>
-                        <div class="phone">
-                          <div class="col-xs-8 pull-left">
-                            <i class="fa fa-phone"></i>&nbsp;<label>093 675 324</label>
-                          </div>
-                        </div>
-                        <div class="fax">
-                          <div class="col-xs-8 pull-left">
-                            <i class="fa fa-fax"></i>&nbsp;<label>093 675 324</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel ">
-                    <div class="panel-heading" role="tab" id="office-two">
-                      <h6 class="panel-title">
-                        <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-two" aria-expanded="false" aria-controls="office-collapse-two">
-                          NAME OF THE OFFICE
-                        </a>
-                      </h6>
-                    </div>
-                    <div id="office-collapse-two" class="panel-collapse collapse in" role="tabpanel"
-                         aria-labelledby="office-two" aria-expanded="false">
-                      <div class="panel-body">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel ">
-                    <div class="panel-heading" role="tab" id="office-3">
-                      <h6 class="panel-title">
-                        <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-3" aria-expanded="false" aria-controls="office-collapse-3">
-                          NAME OF THE OFFICE
-                        </a>
-                      </h6>
-                    </div>
-                    <div id="office-collapse-3" class="panel-collapse collapse in" role="tabpanel"
-                         aria-labelledby="office-3" aria-expanded="false">
-                      <div class="panel-body">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tags">
-            <span class="tag">restaurant</span>
-            <span class="tag">bar</span>
-            <span class="tag">food</span>
-            <span class="tag">bbq</span>
-            <span class="tag">pub</span>
-          </div>
-        </div>
-        <!--End side bar-->
-        <!-- Content-->
-        <div class="col-xs-12 col-lg-9 pull-right">
-          <div class="mainnav">
+    <div id="wrapper">
+        <!--Header-->
+        <header class="navbar navbar-default navbar-static-top hidden-md-down hidden-sm-down hidden-xs">
             <div class="container">
-              <a class="mainnav-toggle" data-toggle="collapse" data-target=".mainnav-collapse">
-                <span class="sr-only">ToggleNavigation</span>
-                <i class="fa fa-bars"></i>
-              </a>
-              <nav class="collapse mainnav-collapse" role="navigation">
-                <ul class="mainnav-menu nav navbar-nav">
-                  <li class="active">
-                    <a href="#about">
-                      <i class="fa fa-home"></i>
-                      ABOUT
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="http://www.just-get.com" class="navbar-brand navbar-brand-img">
+                        <img src="/images/logo-header.png" style="height:50px;" />
                     </a>
-                  </li>
-                  <li>
-                    <a href="#staff">
-                      <i class="fa fa-users"></i>
-                      STAFF
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#promo">
-                      <i class="fa fa-star"></i>
-                      PROMO
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#deliverables">
-                      <i class="fa fa-list"></i>
-                      DELIVERABLES
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#reviews">
-                      <i class="fa fa-comments"></i>
-                      REVIEWS
-                    </a>
-                  </li>
+                </div>
+                <div id="navbar1" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-left visible-lg">
+                        <li class="header-quote">Any service at the best price, reliable, convenient and fast</li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="search-bar">
+                                <input type="text" class="form-control" placeholder="Your wish is my command!" />
+                                <button class="search-btn"><em class="fa fa-search"></em></button>
+                            </form>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=et-EE">
+                                        <span>eesti</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=fi-FI">
+                                        <span>suomi</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://just-get.com/?activeTab=userProfile&amp;NewCulture=ru-RU">
+                                        <span>русский</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="login-menu">
+                                <em class="fa fa-user"></em>
+                                LOGIN
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <nav id="navbar" class="nav-menu navbar-collapse collapse hidden-md-down hidden-sm-down">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Real Estate</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Sport, Health, Beauty</a></li>
+                    <li><a href="#">Family &amp; Training</a></li>
+                    <li><a href="#">Vehicles</a></li>
+                    <li><a href="#">Leisure</a></li>
                 </ul>
-              </nav>
             </div>
-          </div>
-          <div id="settings-content" class="tab-content stacked-content user-description">
-            <div id="about" class="row">
-              <div class="col-xs-12">
-                <label class="section-title">ABOUT</label>
-              </div>
-              <div class="col-xs-12">
-                <div class="row">
-                  <div class="col-xs-12 col-sm-6">
-                    <iframe width="100%" height="215"
-                            src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-                  </div>
-                  <div class="col-xs-12 col-sm-6">
-                    It is a long established fact that reader will be distracted by the readable content of a page when looking at its layout.
-                    The point of using lorem ipsum is that it has a more-or-less normal distribution of letters. as opposed to using content here.
-                    making it look like readable English. Various versions have evolved over the years sometimes by accident, somtime on purpose.<br />
-                    Its is a long the blished fact that reader will be distracted by the readable content of a page when looking at its layout. the point
-                    of using lorem ipsum.
-                  </div>
-                </div>
-              </div>
+        </nav>
+        <!--End Header-->
+        <!--profile-->
+        <div class="user-profile">
+            <!-- page banner-->
+            <div class="banner">
             </div>
-            <div id="staff" class="row">
-              <div class="col-xs-12">
-                <label class="section-title">STAFF <span class="count"><i class="fa fa-circle"></i>8</span></label>
-              </div>
-              <div class="col-xs-12">
-                <div class="team-pic">
-                  <ul class="list-inline">
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff1.png"><br>
-                        <label>Alex Dowtein</label><br />
-                        <span class="text-light-grey">PR Manager</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff2.png"><br>
-                        <label>Alexa Midtown</label><br />
-                        <span class="text-light-grey">Sales Manager</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff3.png"><br>
-                        <label>Damian Titors</label><br />
-                        <span class="text-light-grey">Position</span>
-                      </a>
-                    </li>
-                    <li data-toggle="modal" data-target="#myModal">
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff4.png"><br>
-                        <label>Brendon Shpiel</label><br />
-                        <span class="text-light-grey">Position</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff5.png"><br>
-                        <label>Alexa Midtown</label><br />
-                        <span class="text-light-grey">Sales Manager</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff6.png"><br>
-                        <label>Maria Phenix</label><br />
-                        <span class="text-light-grey">Op Manager</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff7.png"><br>
-                        <label>Olga Kellers</label><br />
-                        <span class="text-light-grey">Position</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" data-slide-to="0">
-                        <img class="img-thumbnail" src="/images/staff8.png"><br>
-                        <label>Damian Titors</label><br />
-                        <span class="text-light-grey">Position</span>
-                      </a>
-                    </li>
-                    <!--end of thumbnails-->
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div id="promo">
-              <div>
-                <label class="section-title">PROMO<span class="count"><i class="fa fa-circle"></i>2</span></label>
-              </div>
-              <div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="promo-pic"></div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="promo-content">
-                      <label>COME FOR THE GRILL...STAY FOR THE THRILL!</label>
-                      <p>If user has something to promot, he can do it in this section. Sure it is Optional</p>
-                      <p>Free beer with every order.</p>
-                      <p>Phone:0161 408 5474</p>
-                      <a href="#">www.webaddress.com</a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="promo-content">
-                      <label>FLAVOUR FAST FOOD. DELICIOS FOOD AT LOWEST PRICE</label>
-                      <p>If user has something to promot, he can do it in this section. Sure it is Optional</p>
-                      <p>Free beer with every order.</p>
-                      <p>Phone:0161 408 5474</p>
-                      <a href="#">www.webaddress.com</a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="promo-pic-2"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="deliverables">
-              <div>
-                <label class="section-title">DELIVERABLES</label>
-              </div>
-              <div>
-                <div class="panel-group panel-deliverables" id="accordion" role="tablist" aria-multiselectable="true">
-                  <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                      <h4 class="panel-title">
-                        <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Category Name<span class="count"><i class="fa fa-circle"></i>4</span>
-                        </a>
+            <!--End page banner-->
+            <!--page content-->
+            <div class="content container">
+                <!--Side bar-->
+                <div class="section-left col-xs-12 col-lg-3 pull-left left-menu">
+                    <div class="user-info">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-lg-12">
+                                <div class="user-title p8">
+                                    <div class="user-logo p8"></div>
+                                    <div class="name-section pull-right">
+                                        <label class="name pull-left">Blazed Bar & Grill</label>
+                                        <div class="star-rating pull-left">
+                                            <span class="fa fa-star" data-rating="1"></span>
+                                            <span class="fa fa-star" data-rating="2"></span>
+                                            <span class="fa fa-star" data-rating="3"></span>
+                                            <span class="fa fa-star" data-rating="4"></span>
+                                            <span class="fa fa-star-o" data-rating="5"></span>
+                                            <input type="hidden" name="whatever1" class="rating-value" value="4">
+                                            <span class="rating-value">4/5</span>
+                                        </div>
+                                        <div class="hidden-md link">www.blazedbarandgrill.com</div>
 
-                      </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                      <div class="panel-body">
-                        <div class="row">
-                          <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
-                          <div class="col-xs-8 col-sm-8 col-md-9">
-                            <h4>Name of the Product</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
-                            <label class="text-success">$14.99</label>
-                            <button class="btn btn-link text-danger">Add To Cart</button>
-                          </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="visible-lg description p8">
+                                <div class="col-lg-12">
+                                    Blazed Bar and Grill - if you don't lick your fingers,enjoy only half!
+                                </div>
+                                <div class="link">www.blazedbarandgrill.com</div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-lg-12">
+                                <div class="user-action p8">
+                                    <div class="share pull-right">
+                                        <a><i class="fa fa-share-alt"></i></a>
+                                        <a><i class="glyphicon glyphicon-bookmark"></i></a>
+                                    </div>
+                                    <button class="pull-right">SEND A MESSAGE</button>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="user-location">
                         <div class="row">
-                          <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
-                          <div class="col-xs-8 col-sm-8 col-md-9">
-                            <h4>Name of the Product</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
-                            <label class="text-success">$14.99</label>
-                            <button class="btn btn-link text-danger">Add To Cart</button>
-                          </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-12 visible-xs">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#home">NAME OF THE OFFICE</a></li>
+                                    <li><a data-toggle="tab" href="#menu1">NAME OF THE OFFICE</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="home" class="tab-pane fade in active">
+                                        <div class="address">
+                                            <div class="col-xs-8 pull-left flex">
+                                                <i class="fa fa-map-marker pull-left"></i>&nbsp;<label class="pull-right">
+                                                    2701 Lombard St
+                                                    San Francisco, CA 94123
+                                                    b/t Baker St and Lyon St
+                                                    Marina/Cow Hollow
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="phone">
+                                            <div class="col-xs-8 pull-left">
+                                                <i class="fa fa-phone"></i>&nbsp;<label>093 675 324</label>
+                                            </div>
+                                        </div>
+                                        <div class="fax">
+                                            <div class="col-xs-8 pull-left">
+                                                <i class="fa fa-fax"></i>&nbsp;<label>093 675 324</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                      
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-12">
+                                <div id="map" class="map"></div>
+                                <div class="navigator"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-12 hidden-xs">
+                                <div class="panel-group">
+                                    <div class="panel ">
+                                        <div class="panel-heading" role="tab" id="office-one">
+                                            <h6 class="panel-title">
+                                                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-one" aria-expanded="true" aria-controls="office-collapse-one">
+                                                    NAME OF THE OFFICE
+                                                </a>
+                                            </h6>
+                                        </div>
+                                        <div id="office-collapse-one" class="panel-collapse collapse in" role="tabpanel"
+                                             aria-labelledby="office-one" aria-expanded="true">
+                                            <div class="panel-body">
+                                                <div class="address">
+                                                    <div class="col-xs-8 pull-left flex">
+                                                        <i class="fa fa-map-marker pull-left"></i>&nbsp;<label class="pull-right">
+                                                            2701 Lombard St
+                                                            San Francisco, CA 94123
+                                                            b/t Baker St and Lyon St
+                                                            Marina/Cow Hollow
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="phone">
+                                                    <div class="col-xs-8 pull-left">
+                                                        <i class="fa fa-phone"></i>&nbsp;<label>093 675 324</label>
+                                                    </div>
+                                                </div>
+                                                <div class="fax">
+                                                    <div class="col-xs-8 pull-left">
+                                                        <i class="fa fa-fax"></i>&nbsp;<label>093 675 324</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel ">
+                                        <div class="panel-heading" role="tab" id="office-two">
+                                            <h6 class="panel-title">
+                                                <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-two" aria-expanded="false" aria-controls="office-collapse-two">
+                                                    NAME OF THE OFFICE
+                                                </a>
+                                            </h6>
+                                        </div>
+                                        <div id="office-collapse-two" class="panel-collapse collapse in" role="tabpanel"
+                                             aria-labelledby="office-two" aria-expanded="false">
+                                            <div class="panel-body">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel ">
+                                        <div class="panel-heading" role="tab" id="office-3">
+                                            <h6 class="panel-title">
+                                                <a role="button" class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#office-collapse-3" aria-expanded="false" aria-controls="office-collapse-3">
+                                                    NAME OF THE OFFICE
+                                                </a>
+                                            </h6>
+                                        </div>
+                                        <div id="office-collapse-3" class="panel-collapse collapse in" role="tabpanel"
+                                             aria-labelledby="office-3" aria-expanded="false">
+                                            <div class="panel-body">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
-                          <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
-                          <div class="col-xs-8 col-sm-8 col-md-9">
-                            <h4>Name of the Product</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
-                            <label class="text-success">$14.99</label>
-                            <button class="btn btn-link text-danger">Add To Cart</button>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
-                          <div class="col-xs-8 col-sm-8 col-md-9">
-                            <h4>Name of the Product</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
-                            <label class="text-success">$14.99</label>
-                            <button class="btn btn-link text-danger">Add To Cart</button>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
-                          <div class="col-xs-8 col-sm-8 col-md-9">
-                            <h4>Name of the Product</h4>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
-                            <label class="text-success">$14.99</label>
-                            <button class="btn btn-link text-danger">Add To Cart</button>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingTwo">
-                      <h4 class="panel-title">
-                        <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Category Name<span class="count"><i class="fa fa-circle"></i>2</span>
-                        </a>
-                      </h4>
+                    <div class="tags visible-md">
+                        <span class="tag">restaurant</span>
+                        <span class="tag">bar</span>
+                        <span class="tag">food</span>
+                        <span class="tag">bbq</span>
+                        <span class="tag">pub</span>
                     </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                      <div class="panel-body">
-                        ...
-                      </div>
-                    </div>
-                  </div>
-                  <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                      <h4 class="panel-title">
-                        <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Category Name<span class="count"><i class="fa fa-circle"></i>2</span>
-                        </a>
-                      </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                      <div class="panel-body">
-                        ...
-                      </div>
-                    </div>
-                  </div>
-                    <div class="loadmore"><a>SEE MORE 4 CATEGORIES &nbsp; <i class="fa fa-angle-down"></i></a></div>
                 </div>
-              </div>
+                <!--End side bar-->
+                <!-- Content-->
+                <div class="section-right col-xs-12 col-lg-9 pull-right">
+                    <div class="mainnav">
+                        <div class="container">
+                            <a class="mainnav-toggle hidden-xs" data-toggle="collapse" data-target=".mainnav-collapse">
+                                <span class="sr-only">ToggleNavigation</span>
+                                <i class="fa fa-bars"></i>
+                            </a>
+                            <nav class="collapse mainnav-collapse" role="navigation">
+                                <ul class="mainnav-menu nav navbar-nav">
+                                    <li class="active">
+                                        <a href="#about">
+                                            <i class="fa fa-home"></i>
+                                            ABOUT
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#staff">
+                                            <i class="fa fa-users"></i>
+                                            STAFF
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#promo">
+                                            <i class="fa fa-star"></i>
+                                            PROMO
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#deliverables">
+                                            <i class="fa fa-list"></i>
+                                            DELIVERABLES
+                                        </a>
+                                    </li>
+                                    <li class="hidden-xs">
+                                        <a href="#reviews">
+                                            <i class="fa fa-comments"></i>
+                                            REVIEWS
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="dropdown-toggle visible-xs" data-toggle="dropdown">
+                                            More &nbsp;<i class="fa fa-caret-down"></i>
+                                        </a>
+                                        <!--<ul class="dropdown-menu" role="menu">
+                                           
+                                        </ul>-->
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div id="settings-content" class="tab-content stacked-content user-description">
+                        <div id="about" class="row">
+                            <div class="col-xs-12">
+                                <label class="section-title">ABOUT</label>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <iframe width="100%" height="215"
+                                                src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        It is a long established fact that reader will be distracted by the readable content of a page when looking at its layout.
+                                        The point of using lorem ipsum is that it has a more-or-less normal distribution of letters. as opposed to using content here.
+                                        making it look like readable English. Various versions have evolved over the years sometimes by accident, somtime on purpose.<br />
+                                        Its is a long the blished fact that reader will be distracted by the readable content of a page when looking at its layout. the point
+                                        of using lorem ipsum.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="staff" class="row">
+                            <div class="col-xs-12">
+                                <label class="section-title">STAFF <span class="count"><i class="fa fa-circle"></i>8</span></label>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="team-pic">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff1.png"><br>
+                                                <label>Alex Dowtein</label><br />
+                                                <span class="text-light-grey">PR Manager</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff2.png"><br>
+                                                <label>Alexa Midtown</label><br />
+                                                <span class="text-light-grey">Sales Manager</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff3.png"><br>
+                                                <label>Damian Titors</label><br />
+                                                <span class="text-light-grey">Position</span>
+                                            </a>
+                                        </li>
+                                        <li data-toggle="modal" data-target="#myModal">
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff4.png"><br>
+                                                <label>Brendon Shpiel</label><br />
+                                                <span class="text-light-grey">Position</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff5.png"><br>
+                                                <label>Alexa Midtown</label><br />
+                                                <span class="text-light-grey">Sales Manager</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff6.png"><br>
+                                                <label>Maria Phenix</label><br />
+                                                <span class="text-light-grey">Op Manager</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff7.png"><br>
+                                                <label>Olga Kellers</label><br />
+                                                <span class="text-light-grey">Position</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-slide-to="0">
+                                                <img class="img-thumbnail" src="/images/staff8.png"><br>
+                                                <label>Damian Titors</label><br />
+                                                <span class="text-light-grey">Position</span>
+                                            </a>
+                                        </li>
+                                        <!--end of thumbnails-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="promo">
+                            <div>
+                                <label class="section-title">PROMO<span class="count"><i class="fa fa-circle"></i>2</span></label>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="promo-pic"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="promo-content">
+                                            <label>COME FOR THE GRILL...STAY FOR THE THRILL!</label>
+                                            <p>If user has something to promot, he can do it in this section. Sure it is Optional</p>
+                                            <p>Free beer with every order.</p>
+                                            <p>Phone:0161 408 5474</p>
+                                            <a href="#">www.webaddress.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 hidden-xs">
+                                        <div class="promo-content">
+                                            <label>FLAVOUR FAST FOOD. DELICIOS FOOD AT LOWEST PRICE</label>
+                                            <p>If user has something to promot, he can do it in this section. Sure it is Optional</p>
+                                            <p>Free beer with every order.</p>
+                                            <p>Phone:0161 408 5474</p>
+                                            <a href="#">www.webaddress.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 hidden-xs">
+                                        <div class="promo-pic-2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="deliverables">
+                            <div>
+                                <label class="section-title">DELIVERABLES</label>
+                            </div>
+                            <div>
+                                <div class="panel-group panel-deliverables visible-lg visible-md" id="accordion" role="tablist" aria-multiselectable="true">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Category Name<span class="count"><i class="fa fa-circle"></i>4</span>
+                                                </a>
+
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-4 col-sm-4 col-md-3"><img class="img-thumbnail" src="/images/service1.png"></div>
+                                                    <div class="col-xs-8 col-sm-8 col-md-9">
+                                                        <h4>Name of the Product</h4>
+                                                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to </p>
+                                                        <label class="text-success">$14.99</label>
+                                                        <button class="btn btn-link text-danger">Add To Cart</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Category Name<span class="count"><i class="fa fa-circle"></i>2</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Category Name<span class="count"><i class="fa fa-circle"></i>2</span>
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="loadmore"><a>SEE MORE 4 CATEGORIES &nbsp; <i class="fa fa-angle-down"></i></a></div>
+                                </div>
+                                <div class="panel-group panel-deliverables hidden-md" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div id="services" class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <div class="pull-left">
+                                                <label>Sort By:</label> &nbsp;
+                                            </div>
+                                            <div class="btn-group ">
+                                                <div class="btn-group">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                        Price &nbsp;<i class="fa fa-caret-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Price 1</a></li>
+                                                        <li><a href="#">Price 2</a></li>
+
+                                                    </ul>
+                                                </div> &nbsp;
+                                                <div class="btn-group">
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                        All Categories &nbsp;<i class="fa fa-caret-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">Category 1</a></li>
+                                                        <li><a href="#">Category 2</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="thumbnail-view">
+                                                <a class="active" id="list">
+                                                    <i class="glyphicon glyphicon-th-list"></i>
+                                                </a>
+                                                <a id="grid">
+                                                    <i class="glyphicon glyphicon-th-large"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div id="products" class="row list-group">
+                                                <div class="item  col-xs-4 col-lg-4 list-group-item">
+                                                    <div class="thumbnail">
+                                                        <img class="group list-group-image" src="/images/service1.png" alt="" />
+                                                        <div class="caption">
+                                                            <h4 class="group inner list-group-item-heading">
+                                                                NAME OF THE SERVICE
+                                                            </h4>
+                                                            <p class="group inner list-group-item-text">
+                                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 pull-left">
+                                                                    <p class="lead">
+                                                                        € 21.00
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-7">
+
+                                                                    <a class="add-to-cart">ADD TO CART</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item  col-xs-4 col-lg-4 list-group-item">
+                                                    <div class="thumbnail">
+                                                        <img class="group list-group-image" src="/images/service2.png" alt="" />
+                                                        <div class="caption">
+                                                            <h4 class="group inner list-group-item-heading">
+                                                                NAME OF THE SERVICE
+                                                            </h4>
+                                                            <p class="group inner list-group-item-text">
+                                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 pull-left">
+                                                                    <p class="lead">
+                                                                        € 221.00
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-7">
+
+                                                                    <a class="add-to-cart">ADD TO CART</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item  col-xs-4 col-lg-4 list-group-item">
+                                                    <div class="thumbnail">
+                                                        <img class="group list-group-image" src="/images/service3.png" alt="" />
+                                                        <div class="caption">
+                                                            <h4 class="group inner list-group-item-heading">
+                                                                NAME OF THE SERVICE
+                                                            </h4>
+                                                            <p class="group inner list-group-item-text">
+                                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 pull-left">
+                                                                    <p class="lead">
+                                                                        € 291.00
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-7">
+
+                                                                    <a class="add-to-cart">ADD TO CART</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item  col-xs-4 col-lg-4 list-group-item">
+                                                    <div class="thumbnail">
+                                                        <img class="group list-group-image" src="/images/service4.png" alt="" />
+                                                        <div class="caption">
+                                                            <h4 class="group inner list-group-item-heading">
+                                                                NAME OF THE SERVICE
+                                                            </h4>
+                                                            <p class="group inner list-group-item-text">
+                                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 pull-left">
+                                                                    <p class="lead">
+                                                                        € 21.00
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-7">
+
+                                                                    <a class="add-to-cart">ADD TO CART</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item  col-xs-4 col-lg-4 list-group-item">
+                                                    <div class="thumbnail">
+                                                        <img class="group list-group-image" src="/images/service5.png" alt="" />
+                                                        <div class="caption">
+                                                            <h4 class="group inner list-group-item-heading">
+                                                                NAME OF THE SERVICE
+                                                            </h4>
+                                                            <p class="group inner list-group-item-text">
+                                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 pull-left">
+                                                                    <p class="lead">
+                                                                        € 21.00
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-7">
+
+                                                                    <a class="add-to-cart">ADD TO CART</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item  col-xs-4 col-lg-4 list-group-item">
+                                                    <div class="thumbnail">
+                                                        <img class="group list-group-image" src="/images/service6.png" alt="" />
+                                                        <div class="caption">
+                                                            <h4 class="group inner list-group-item-heading">
+                                                                NAME OF THE SERVICE
+                                                            </h4>
+                                                            <p class="group inner list-group-item-text">
+                                                                Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                                                            </p>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-md-5 pull-left">
+                                                                    <p class="lead">
+                                                                        € 21.00
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-xs-12 col-md-7">
+
+                                                                    <a class="add-to-cart">ADD TO CART</a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="loadmore"><a>SEE MORE 4 CATEGORIES &nbsp; <i class="fa fa-angle-down"></i></a></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="reviews">
+                            <div>
+                                <label class="section-title">REVIEWS<span class="count"><i class="fa fa-circle"></i>4</span> <a class="pull-right"><i class="fa fa-pencil"> &nbsp; WRITE A REVIEW</i></a></label>
+                            </div>
+                            <div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <span class="media-object"></span>
+                                            <!--use image if exist with same class-->
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff<span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><span class="media-object"></span></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff<span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><span class="media-object"></span></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff <span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#"><span class="media-object"></span></a>
+                                    </div>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Diego Shteff<span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.tab-content -->
+                </div>
+                <!--End content-->
+                <div class="clearfix"></div>
+                <!--Reference-->
+                <div class="row" style="display:inline;">
+                    <div class="pull-left" style="text-align:center;"> <label>SIMILAR COMPANIES</label></div>
+                    <div class="col-md-10 pull-right">
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="row reference">
+                    <ul class="list-inline">
+                        <li>
+                            <img class="img-thumbnail" src="/images/cmp1.png"><br>
+                            <label>Name of Company</label><br />
+                            <span class="text-light-grey">slogan/motto/small</span>
+                        </li>
+                        <li>
+                            <img class="img-thumbnail" src="/images/cmp2.png"><br>
+                            <label>Name of Company</label><br />
+                            <span class="text-light-grey">slogan/motto/small</span>
+                        </li>
+                        <li>
+                            <img class="img-thumbnail" src="/images/cmp3.png"><br>
+                            <label>Name of Company</label><br />
+                            <span class="text-light-grey">slogan/motto/small</span>
+                        </li>
+                        <li>
+                            <img class="img-thumbnail" src="/images/cmp4.png"><br>
+                            <label>Name of Company</label><br />
+                            <span class="text-light-grey">slogan/motto/small</span>
+                        </li>
+                        <li>
+                            <img class="img-thumbnail" src="/images/cmp5.png"><br>
+                            <label>Name of Company</label><br />
+                            <span class="text-light-grey">slogan/motto/small</span>
+                        </li>
+                        <!--end of thumbnails-->
+                    </ul>
+                </div>
+                <!--End Reference-->
             </div>
-            <div id="reviews">
-              <div>
-                <label class="section-title">REVIEWS<span class="count"><i class="fa fa-circle"></i>4</span> <a class="pull-right"><i class="fa fa-pencil"> &nbsp; WRITE A REVIEW</i></a></label>
-              </div>
-              <div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#">
-                      <span class="media-object"></span>
-                      <!--use image if exist with same class-->
-                    </a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Diego Shteff<span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#"><span class="media-object"></span></a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Diego Shteff<span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#"><span class="media-object"></span></a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Diego Shteff <span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
-                  </div>
-                </div>
-                <div class="media">
-                  <div class="media-left">
-                    <a href="#"><span class="media-object"></span></a>
-                  </div>
-                  <div class="media-body">
-                    <h4 class="media-heading">Diego Shteff<span class="pull-right"><i class="glyphicon glyphicon-time"></i> &nbsp; 2 days ago &nbsp; <i class="fa fa-share-alt"></i></span></h4>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Various versions have evolved over the years, some
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!-- /.tab-content -->
+            <!-- End page content -->
         </div>
-        <!--End content-->
-        <div class="clearfix"></div>
-        <!--Reference-->
-        <div class="row" style="display:inline;">
-          <div class="pull-left" style="text-align:center;"> <label>SIMILAR COMPANIES</label></div>
-          <div class="col-md-10 pull-right">
-            <h2></h2>
-          </div>
-        </div>
-        <div class="row reference">
-          <ul class="list-inline">
-            <li>
-              <img class="img-thumbnail" src="/images/cmp1.png"><br>
-              <label>Name of Company</label><br />
-              <span class="text-light-grey">slogan/motto/small</span>
-            </li>
-            <li>
-              <img class="img-thumbnail" src="/images/cmp2.png"><br>
-              <label>Name of Company</label><br />
-              <span class="text-light-grey">slogan/motto/small</span>
-            </li>
-            <li>
-              <img class="img-thumbnail" src="/images/cmp3.png"><br>
-              <label>Name of Company</label><br />
-              <span class="text-light-grey">slogan/motto/small</span>
-            </li>
-            <li>
-              <img class="img-thumbnail" src="/images/cmp4.png"><br>
-              <label>Name of Company</label><br />
-              <span class="text-light-grey">slogan/motto/small</span>
-            </li>
-            <li>
-              <img class="img-thumbnail" src="/images/cmp5.png"><br>
-              <label>Name of Company</label><br />
-              <span class="text-light-grey">slogan/motto/small</span>
-            </li>
-            <!--end of thumbnails-->
-          </ul>
-        </div>
-        <!--End Reference-->
-      </div>
-      <!-- End page content -->
+        <!--End profile -->
+        <script>
+
+
+            $(function () {
+                $(".nav-tabs a").click(function () {
+                    $(this).tab('show');
+                });
+                $('.parsley-form').submit(function (e) {
+                    e.preventDefault();
+                });
+
+                $("form").keydown(function (ev) {
+                    if (ev.which == 13 && ev.target.type != "textarea") {
+                        justGet.submitParsleyForm(ev.target);
+                    }
+
+                });
+                $('#list').click(function (event) {
+                    event.preventDefault();
+                    $('#list').addClass("active");
+                    $('#grid').removeClass('active');
+                    $('#products .item').removeClass('grid-group-item');
+                    $('#products .item').addClass('list-group-item');
+
+                    $('.content .col-md-7').addClass('col-md-7-width20').removeClass('col-md-7');;
+
+                });
+                $('#grid').click(function (event) {
+                    event.preventDefault();
+                    $('#grid').addClass("active");
+                    $('#list').removeClass('active');
+                    $('#products .item').removeClass('list-group-item');
+                    $('#products .item').addClass('grid-group-item');
+                    $('.content .col-md-7-width20').addClass('col-md-7').removeClass('col-md-7-width20');
+                });
+
+
+            });
+
+        </script>
+        <script>
+            function initMap() {
+                var uluru = { lat: -25.363, lng: 131.044 };
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 4,
+                    center: uluru,
+                    disableDefaultUI: true
+                });
+                var marker = new google.maps.Marker({
+                    position: uluru,
+                    map: map
+                });
+            }
+
+
+
+            $(".nav a").on("click", function () {
+                $(".nav").find(".active").removeClass("active");
+                $(this).parent().addClass("active");
+            });
+
+
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAlb992cRYzvfz5mPU29pG4Al7WS3EPcY&callback=initMap">
+
+        </script>
     </div>
-    <!--End profile -->
-    <script>
+    <br /><br /><br /><br />
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-left">
+                &copy; 2015 Just-Get.Com O&#220;, India
+            </p>
+            <p class="pull-right">
+                <a href="http://www.bitministry.com">
+                    <img src="/images/bitministry.png" />
+                </a>
+            </p>
+        </div>
+    </footer>
 
+    <!-- Start of LiveChat (www.livechatinc.com) code -->
+    <script type="text/javascript">
+        window.__lc = window.__lc || {};
+        window.__lc.license = 8115501;
 
-      $(function () {
-
-        $('.parsley-form').submit(function (e) {
-          e.preventDefault();
-        });
-
-        $("form").keydown(function (ev) {
-          if (ev.which == 13 && ev.target.type != "textarea") {
-            justGet.submitParsleyForm(ev.target);
-          }
-
-        });
-
-
-      });
-
+        window.__lc.visitor = {
+            name: '',
+            email: 'chintanavailable@gmail.com'
+        };
+        (function () {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
     </script>
-    <script>
-      function initMap() {
-        var uluru = { lat: -25.363, lng: 131.044 };
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru,
-          disableDefaultUI: true
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-
-
-
-      $(".nav a").on("click", function () {
-        $(".nav").find(".active").removeClass("active");
-        $(this).parent().addClass("active");
-      });
-
-
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAlb992cRYzvfz5mPU29pG4Al7WS3EPcY&callback=initMap">
-
-    </script>
-  </div>
-  <br /><br /><br /><br />
-  <footer class="footer">
-    <div class="container">
-      <p class="pull-left">
-        &copy; 2015 Just-Get.Com O&#220;, India
-      </p>
-      <p class="pull-right">
-        <a href="http://www.bitministry.com">
-          <img src="/images/bitministry.png" />
-        </a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Start of LiveChat (www.livechatinc.com) code -->
-  <script type="text/javascript">
-      window.__lc = window.__lc || {};
-      window.__lc.license = 8115501;
-
-      window.__lc.visitor = {
-        name: '',
-        email: 'chintanavailable@gmail.com'
-      };
-      (function () {
-        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
-        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
-      })();
-  </script>
-  <!-- End of LiveChat code -->
+    <!-- End of LiveChat code -->
 </body>
 </html>
