@@ -1,34 +1,152 @@
 ﻿@import "../skin/bootstrap/variables";
 
+.flex {
+    display: flex;
+}
+
+.navbar {
+    background: white;
+    border: 0;
+
+    .navbar-brand:hover,
+    .navbar .navbar-brand:focus {
+        color: initial;
+        background-color: transparent;
+    }
+
+    .navbar-toggle {
+        .icon-bar {
+            background-color: #aaa;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+    }
+
+    .header-quote {
+        padding: 16px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .search-bar {
+        position: relative;
+        margin: 9px;
+
+        .form-control {
+            border-radius: 15px;
+            padding: 12px 36px 12px 16px;
+            min-width: 260px;
+        }
+
+        .search-btn {
+            position: absolute;
+            top: 0;
+            right: 6px;
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+            color: #ff7680;
+            line-height: 32px;
+        }
+    }
+
+    .navbar-nav {
+        > li,
+        > .open,
+        > .active {
+            > a {
+                &,
+                &:hover,
+                &:focus {
+                    color: #aaa;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu:before {
+        border-bottom-color: #aaa;
+    }
+
+    .login-menu {
+        padding: 8px 16px;
+
+        &,
+        &:hover,
+        &:focus {
+            color: #ff7680 !important;
+        }
+
+        em {
+            width: 36px;
+            height: 36px;
+            background: #ff7680;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+        }
+    }
+}
+
+.nav-menu {
+    background: #344c5e;
+
+    .navbar-nav {
+        > li {
+            > a {
+                &,
+                &:hover,
+                &:focus,
+                &:active {
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 600;
+                    background: transparent;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    background: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+}
 
 .user-avatar {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
 }
 
 .mt-2 {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .header {
-  width: 1920px;
-  height: 292px;
+    width: 1920px;
+    height: 292px;
 }
 
 
 .menu {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
-  width: 847px;
-  height: 60px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
+    width: 847px;
+    height: 60px;
 }
 
 @font-face {
-  font-family: 'GothamPro';
-  src: url('../../fonts/GothamPro.eot?') format('eot'), url('../../fonts/GothamPro.otf') format('opentype'), url('../../fonts/GothamPro.woff') format('woff'), url('../../fonts/GothamPro.ttf') format('truetype'), url('../../fonts/GothamPro.svg#GothamPro') format('svg');
+    font-family: 'GothamPro';
+    src: url('../../fonts/GothamPro.eot?') format('eot'), url('../../fonts/GothamPro.otf') format('opentype'), url('../../fonts/GothamPro.woff') format('woff'), url('../../fonts/GothamPro.ttf') format('truetype'), url('../../fonts/GothamPro.svg#GothamPro') format('svg');
 }
 
 .user-profile {
@@ -66,6 +184,38 @@
         font-weight: 700;
     }
 
+
+
+    label.section-title > span > i, .panel-title > a > span > i {
+        color: #aeaeae !important;
+        font-size: 10px; /* Approximation due to font substitution */
+        font-weight: 400;
+        text-align: left;
+        padding-right: 10px;
+        padding-left: 10px;
+        vertical-align: middle;
+    }
+
+    label.section-title > a {
+        color: #ff7680 !important;
+        font-size: 13px; /* Approximation due to font substitution */
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    label.section-title > span > i:before {
+        content: "\f111";
+    }
+
+    .section-title > span {
+        font-family: GothamPro;
+        color: #aeaeae !important;
+        font-size: 26px; /* Approximation due to font substitution */
+        font-weight: 400;
+        text-align: left;
+    }
+
     .krajee-default.file-preview-frame {
         .kv-file-content {
             width: initial !important;
@@ -90,6 +240,23 @@
         margin-right: 16px;
     }
 
+    .media-heading {
+        font-family: GothamPro;
+        color: #344c5e !important;
+        font-size: 14px; /* Approximation due to font substitution */
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .media-heading > span {
+        font-family: GothamPro;
+        color: #b8b8b8!important;
+        font-size: 11px; /* Approximation due to font substitution */
+        font-weight: 400;
+        line-height: 22px; /* Approximation due to font substitution */
+        text-align: right;
+    }
+
     .panel-deliverables {
         .panel {
             background: transparent;
@@ -111,9 +278,13 @@
             text-align: left;
         }
 
+        .panel-title > a > span {
+            color: #aeaeae !important;
+        }
+
         h4 {
             font-family: GothamPro;
-            color: #344c5e!important;
+            color: #344c5e !important;
             font-size: 13px; /* Approximation due to font substitution */
             font-weight: 500;
             text-align: left;
@@ -127,13 +298,27 @@
             /* symbol for "opening" panels */
             font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
             float: right; /* adjust as needed */
-            color: grey; /* adjust as needed */
+            color: gray !important; /* adjust as needed */
             content: "\e113";
         }
 
         .panel-heading .accordion-toggle.collapsed:after {
             /* symbol for "collapsed" panels */
             content: "\e114"; /* adjust as needed, taken from bootstrap.css */
+            color: #ff7680 !important;
+        }
+
+        .loadmore {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .loadmore > a {
+            color: #ff7680 !important;
+            font-size: 13px; /* Approximation due to font substitution */
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
         }
     }
 
@@ -161,6 +346,11 @@
             border-radius: 5px;
             margin-bottom: 85px;
             background: transparent;
+
+            @media (max-width:1199px) {
+                top: 0;
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -314,8 +504,7 @@
         box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
         width: 100%;
         height: auto;
-        margin-top: 10%;
-        overflow: auto;
+        margin-top: 24px;
         position: relative;
 
         .map {
@@ -444,7 +633,6 @@
         position: relative;
         clear: both;
         overflow: auto;
-        min-height: 150px;
         padding: 10px 0px 10px 0px;
 
         .tag {
