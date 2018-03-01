@@ -2102,6 +2102,13 @@
     border-left: 0px;
     border-right: 0px;
   }
+  .user-profile .fa {
+    color: #bababa;
+    font-size: 11px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: center;
+  }
   .user-profile .section-right {
     width: 100% !important;
   }
@@ -2778,8 +2785,33 @@
   .user-profile .col-xs-6 {
     width: 80%;
   }
+  .user-profile .user-description .item.list-group-item .list-group-image {
+    margin-right: 10px;
+    height: auto;
+    width: 26%;
+  }
+  .user-profile .user-description .item.list-group-item .caption {
+    padding: 0 0 0 0;
+    width: 70%;
+    float: right;
+    /* text-align: left; */
+  }
   .user-profile .user-description .list-group-item .col-xs-12 {
-    width: 24%;
+    width: 40%;
+  }
+  .user-profile .nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    font-size: 12px;
+  }
+  .user-profile .user-location .fa {
+    color: #bababa;
+    font-size: 11px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: center;
   }
   .user-profile .user-description .panel-body .thumbnail div.row a.add-to-cart {
     font-size: 10px;
