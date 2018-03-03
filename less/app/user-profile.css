@@ -253,6 +253,10 @@ header {
     display: none !important;
   }
 }
+.user-profile {
+  color: #ffffff;
+  font-family: GothamPro !important;
+}
 .user-profile .col-lg-3 {
   width: 27%;
 }
@@ -292,11 +296,36 @@ header {
   font-weight: 400;
   text-align: left;
 }
+.user-profile .text-light-grey {
+  color: #aaa;
+}
+.user-profile .text-success {
+  color: #09b752;
+  margin-right: 15%;
+}
+.user-profile .text-danger {
+  color: #ff7680;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.user-profile .section-title {
+  display: block;
+  border-bottom: 1px solid;
+  padding: 10px 0 12px;
+  margin-bottom: 16px;
+  color: #344c5e;
+  font-size: 26px;
+  /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: left;
+}
+.user-profile #deliverables {
+  margin-top: 10px;
+}
+.user-profile #map {
+  height: 182px !important;
+}
 @media only screen and (min-width: 1281px) {
-  .user-profile {
-    color: #ffffff;
-    font-family: GothamPro !important;
-  }
   .user-profile .section-left-fix {
     position: fixed;
     z-index: 100;
@@ -315,32 +344,6 @@ header {
     top: 0 !important;
     background: #fff !important;
     width: 803px;
-  }
-  .user-profile #map {
-    height: 182px !important;
-  }
-  .user-profile .text-light-grey {
-    color: #aaa;
-  }
-  .user-profile .text-success {
-    color: #09b752;
-    margin-right: 15%;
-  }
-  .user-profile .text-danger {
-    color: #ff7680;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  .user-profile .section-title {
-    display: block;
-    border-bottom: 1px solid;
-    padding: 10px 0 12px;
-    margin-bottom: 16px;
-    color: #344c5e;
-    font-size: 26px;
-    /* Approximation due to font substitution */
-    font-weight: 700;
-    text-align: left;
   }
   .user-profile label.section-title > span {
     font-size: 18px;
@@ -645,10 +648,6 @@ header {
     margin-top: 24px;
     position: relative;
   }
-  .user-profile .user-location .map {
-    width: 100%;
-    height: 82px !important;
-  }
   .user-profile .user-location .navigator {
     border-radius: 50%;
     background-color: #ffffff;
@@ -922,52 +921,43 @@ header {
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-  .user-profile {
-    color: #ffffff;
-    font-family: 'GothamPro';
+  .user-profile .section-left-fix {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 300px !important;
   }
-  .user-profile .col-lg-9 .mainnav {
-    top: 75px;
-    height: 58px;
-    border-radius: 5px;
-    margin-bottom: 85px;
-    background: transparent;
+  .user-profile .section-left-stop {
+    position: fixed;
+    z-index: 100;
+    top: -250px !important;
+    width: 300px !important;
+  }
+  .user-profile .section-right .mainnav-fix {
+    position: fixed;
+    z-index: 100;
+    top: 0 !important;
+    background: #fff !important;
+    width: 803px !important;
   }
   .user-profile .section-left {
-    width: 32% !important;
+    width: 30%;
   }
   .user-profile .section-left .col-xs-6,
   .user-profile .section-left .col-sm-6 {
     width: 100%;
   }
   .user-profile .section-right {
-    width: 68% !important;
+    width: 70%;
   }
-  .user-profile .text-light-grey {
-    color: #aaa;
-  }
-  .user-profile .text-success {
-    color: #09b752;
-  }
-  .user-profile .text-danger {
-    color: #ff7680;
-  }
-  .user-profile .section-title {
-    display: block;
-    border-bottom: 1px solid;
-    padding: 2px 0 12px;
-    margin-bottom: 16px;
-    font-family: GothamPro;
-    color: #344c5e;
-    font-size: 26px;
+  .user-profile label.section-title > span {
+    font-size: 18px;
     /* Approximation due to font substitution */
-    font-weight: 700;
-    text-align: left;
   }
   .user-profile label.section-title > span > i,
   .user-profile .panel-title > a > span > i {
     color: #aeaeae !important;
-    font-size: 10px;
+    font-size: 5px;
     /* Approximation due to font substitution */
     font-weight: 400;
     text-align: left;
@@ -992,6 +982,16 @@ header {
     font-size: 26px;
     /* Approximation due to font substitution */
     font-weight: 400;
+    text-align: left;
+  }
+  .user-profile .about-text {
+    font-family: GothamPro;
+    color: #6f6f6f;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 22px;
+    /* Approximation due to font substitution */
     text-align: left;
   }
   .user-profile .krajee-default.file-preview-frame .kv-file-content {
@@ -1025,7 +1025,7 @@ header {
   .user-profile .media-heading > span {
     font-family: GothamPro;
     color: #b8b8b8 !important;
-    font-size: 11px;
+    font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 400;
     line-height: 22px;
@@ -1056,17 +1056,12 @@ header {
   .user-profile .panel-deliverables h4 {
     font-family: GothamPro;
     color: #344c5e !important;
-    font-size: 13px;
+    color: #344c5e;
+    font-size: 14px;
     /* Approximation due to font substitution */
-    font-weight: 500;
-    text-align: left;
-  }
-  .user-profile .panel-deliverables .media-body {
-    font-family: GothamPro;
-    color: #808080;
-    font-size: 10px;
     font-weight: 700;
     text-align: left;
+    text-transform: uppercase;
   }
   .user-profile .panel-deliverables .panel-body > .row {
     margin-bottom: 16px;
@@ -1128,7 +1123,7 @@ header {
     padding: 8px;
   }
   .user-profile .user-info .p8 {
-    padding: 4px;
+    padding: 7px;
   }
   .user-profile .user-info label {
     font-family: GothamPro !important;
@@ -1137,13 +1132,14 @@ header {
     display: flex;
   }
   .user-profile .user-info .user-logo {
-    width: 88px;
+    width: 60px;
     height: 60px;
     background-image: url(../../../../images/logo.png?v=18022018);
     background-repeat: no-repeat;
     margin: 0px !important;
     display: inline-block;
-    clear: left;
+    clear: both;
+    background-size: contain;
     float: left;
   }
   .user-profile .user-info .name-section {
@@ -1196,12 +1192,14 @@ header {
   }
   .user-profile .user-info .user-action {
     display: inline-block;
+    font-family: GothamPro;
     color: #ff7680;
     font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
+    width: 97%;
   }
   .user-profile .user-info .user-action button {
     border-radius: 3px;
@@ -1224,10 +1222,11 @@ header {
     padding: 5px 0px 0px;
   }
   .user-profile .user-info .user-action .share > a {
-    color: #9a9a9a !important;
-    font-size: 14pt !important;
+    color: #bababa !important;
+    font-size: 13px !important;
     /* Approximation due to font substitution */
-    font-weight: 500;
+    font-weight: 400;
+    text-align: center;
     margin-left: 10px;
   }
   .user-profile .user-info .user-action .btn-simple {
@@ -1254,10 +1253,6 @@ header {
     margin-top: 24px;
     position: relative;
   }
-  .user-profile .user-location .map {
-    width: 100%;
-    height: 182px !important;
-  }
   .user-profile .user-location .navigator {
     border-radius: 50%;
     background-color: #ffffff;
@@ -1277,17 +1272,7 @@ header {
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
     word-wrap: break-word;
-  }
-  .user-profile .user-location .col-xs-8 {
-    width: 100%;
-  }
-  .user-profile .user-location .col-xs-8 label {
-    font-family: GothamPro;
-    color: #000000;
-    font-size: 14px;
-    /* Approximation due to font substitution */
-    font-weight: 400;
-    text-align: left;
+    width: 260px;
   }
   .user-profile .user-location .panel-group,
   .user-profile .user-location .panel-group .panel {
@@ -1298,6 +1283,9 @@ header {
   }
   .user-profile .user-location .panel-body {
     border: none !important;
+  }
+  .user-profile .user-location .panel-heading {
+    padding: 0px 15px;
   }
   .user-profile .user-location .panel-title {
     font-family: GothamPro !important;
@@ -1345,17 +1333,29 @@ header {
     text-decoration: none;
     font-family: GothamPro !important;
     color: #ff7680 !important;
-    font-size: 10px;
+    font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 500;
     line-height: 26px;
     /* Approximation due to font substitution */
     text-align: left;
+    /* Approximation due to font substitution */
     background-color: transparent;
     border: none !important;
   }
   .user-profile .user-location .panel-body {
-    padding: 0px;
+    padding: 0px 20px;
+  }
+  .user-profile .user-location .col-xs-8 {
+    width: 97%;
+  }
+  .user-profile .user-location .col-xs-8 label {
+    font-family: GothamPro;
+    color: #000000;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: left;
   }
   .user-profile .user-location .fa {
     color: #bababa;
@@ -1474,16 +1474,21 @@ header {
     margin: 0 auto;
     padding: 25px 25px 25px 25px;
   }
+  .user-profile .user-description .promo-content label {
+    font-size: 16px;
+  }
+  .user-profile .user-description .promo-content p {
+    font-size: 14px;
+  }
   .user-profile .user-description .team-pic > ul {
     margin: 0 auto !important;
   }
   .user-profile .user-description .team-pic > ul > li {
     vertical-align: top;
     text-align: center;
-    width: 14%;
+    width: 20%;
     height: 4%;
-    margin-right: 5%;
-    margin-bottom: 5%;
+    margin-right: 4.5%;
   }
   .user-profile h2 {
     width: 100%;
@@ -1501,7 +1506,6 @@ header {
     background: transparent;
   }
   .user-profile .mainnav-menu > li > a .fa {
-    font-size: 18px;
     margin-right: 4px;
   }
   .user-profile .img-thumbnail {
@@ -1509,17 +1513,13 @@ header {
     border: none !important;
   }
   .user-profile .reference > ul > li {
-    text-align: center;
-    margin-left: 15px;
-    margin-right: 62px;
-    margin-bottom: 16px;
+    margin-right: 35px;
+  }
+  .user-profile #deliverables {
+    margin-top: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .user-profile {
-    color: #ffffff;
-    font-family: 'GothamPro';
-  }
   .user-profile .section-left {
     width: 100% !important;
   }
@@ -1529,9 +1529,6 @@ header {
   }
   .user-profile .section-right {
     width: 100% !important;
-  }
-  .user-profile .section-right .user-description .promo-pic {
-    background-size: 100% 100%;
   }
   .user-profile .section-right .col-md-6 {
     width: 50%;
@@ -1543,31 +1540,17 @@ header {
   .user-profile .section-right .panel-visible {
     display: block;
   }
-  .user-profile .text-light-grey {
-    color: #aaa;
+  .user-profile #map {
+    height: 230px !important;
   }
-  .user-profile .text-success {
-    color: #09b752;
-  }
-  .user-profile .text-danger {
-    color: #ff7680;
-  }
-  .user-profile .section-title {
-    display: block;
-    border-bottom: 1px solid;
-    font-size: 28px;
-    padding: 24px 0 12px;
-    margin-bottom: 16px;
-    font-family: GothamPro;
-    color: #344c5e;
-    font-size: 26px;
+  .user-profile label.section-title > span {
+    font-size: 18px;
     /* Approximation due to font substitution */
-    font-weight: 700;
   }
   .user-profile label.section-title > span > i,
   .user-profile .panel-title > a > span > i {
     color: #aeaeae !important;
-    font-size: 10px;
+    font-size: 5px;
     /* Approximation due to font substitution */
     font-weight: 400;
     text-align: left;
@@ -1592,6 +1575,16 @@ header {
     font-size: 26px;
     /* Approximation due to font substitution */
     font-weight: 400;
+    text-align: left;
+  }
+  .user-profile .about-text {
+    font-family: GothamPro;
+    color: #6f6f6f;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 22px;
+    /* Approximation due to font substitution */
     text-align: left;
   }
   .user-profile .krajee-default.file-preview-frame .kv-file-content {
@@ -1625,7 +1618,7 @@ header {
   .user-profile .media-heading > span {
     font-family: GothamPro;
     color: #b8b8b8 !important;
-    font-size: 11px;
+    font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 400;
     line-height: 22px;
@@ -1656,17 +1649,12 @@ header {
   .user-profile .panel-deliverables h4 {
     font-family: GothamPro;
     color: #344c5e !important;
-    font-size: 13px;
+    color: #344c5e;
+    font-size: 14px;
     /* Approximation due to font substitution */
     font-weight: 700;
     text-align: left;
-  }
-  .user-profile .panel-deliverables .media-body {
-    font-family: GothamPro;
-    color: #808080;
-    font-size: 10px;
-    font-weight: 700;
-    text-align: left;
+    text-transform: uppercase;
   }
   .user-profile .panel-deliverables .panel-body > .row {
     margin-bottom: 16px;
@@ -1699,6 +1687,106 @@ header {
     cursor: pointer;
     text-decoration: none;
   }
+  .user-profile .panel-deliverables .loadmore {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .user-profile .panel-deliverables .loadmore > a {
+    color: #ff7680 !important;
+    font-size: 13px;
+    /* Approximation due to font substitution */
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .user-profile .panel-deliverables .panel-heading {
+    margin-bottom: 0px !important;
+  }
+  .user-profile .panel-deliverables .panel-heading a.active {
+    color: #ff7680;
+  }
+  .user-profile .panel-deliverables .panel-heading a,
+  .user-profile .panel-deliverables .panel-heading label {
+    color: gray;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .user-profile .panel-deliverables .panel-heading .btn-group + .btn-group {
+    margin-left: 10px !important;
+  }
+  .user-profile .panel-deliverables .panel-heading .btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .user-profile .panel-deliverables .panel-heading .btn-group > a {
+    font-family: GothamPro;
+    color: #344c5e !important;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 700;
+    text-align: left;
+  }
+  .user-profile .panel-deliverables .item.list-group-item {
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 0px !important;
+    border: none !important;
+  }
+  .user-profile .panel-deliverables .panel-body .thumbnail div.row a.add-to-cart {
+    font-family: GothamPro;
+    color: #ff7680 !important;
+    font-size: 13px;
+    /* Approximation due to font substitution */
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .user-profile .panel-deliverables .list-group-item .col-xs-12 {
+    width: 25%;
+  }
+  .user-profile .panel-deliverables .item.list-group-item .list-group-image {
+    margin-right: 10px;
+  }
+  .user-profile .panel-deliverables .item.list-group-item .thumbnail {
+    margin-bottom: 0px;
+  }
+  .user-profile .panel-deliverables .item.list-group-item .caption {
+    padding: 0px 0px 0px 0px;
+  }
+  .user-profile .panel-deliverables .grid-group-item .col-md-5 {
+    width: 100px !important;
+    padding-right: 0px;
+  }
+  .user-profile .panel-deliverables .grid-group-item .col-md-7 {
+    width: 110px !important;
+    padding-right: 0px;
+  }
+  .user-profile .panel-deliverables .item.list-group-item:nth-of-type(odd) {
+    background: #eeeeee;
+  }
+  .user-profile .panel-deliverables .item.list-group-item:before,
+  .user-profile .panel-deliverables .item.list-group-item:after {
+    display: table;
+    content: " ";
+  }
+  .user-profile .panel-deliverables .item.list-group-item img {
+    float: left;
+  }
+  .user-profile .panel-deliverables .item.list-group-item:after {
+    clear: both;
+  }
+  .user-profile .panel-deliverables .list-group-item-text {
+    margin: 0 0 11px;
+  }
+  .user-profile .panel-deliverables .thumbnail {
+    padding: 0px !important;
+    border: none !important;
+    border-radius: 0px !important;
+    margin-bottom: 0px !important;
+  }
   .user-profile .banner {
     background-image: url(../../../../images/banner.png?v=18022018);
     background-repeat: no-repeat;
@@ -1714,10 +1802,10 @@ header {
     top: 5px;
   }
   .user-profile .col-lg-9 .mainnav {
-    top: 75px;
+    top: 15px;
     height: 58px;
     border-radius: 5px;
-    margin-bottom: 85px;
+    margin-bottom: 15px;
     background: transparent;
   }
   .user-profile .user-info {
@@ -1728,7 +1816,7 @@ header {
     padding: 8px;
   }
   .user-profile .user-info .p8 {
-    padding: 4px;
+    padding: 7px;
   }
   .user-profile .user-info label {
     font-family: GothamPro !important;
@@ -1737,13 +1825,14 @@ header {
     display: flex;
   }
   .user-profile .user-info .user-logo {
-    width: 88px;
+    width: 60px;
     height: 60px;
     background-image: url(../../../../images/logo.png?v=18022018);
     background-repeat: no-repeat;
     margin: 0px !important;
     display: inline-block;
-    clear: left;
+    clear: both;
+    background-size: contain;
     float: left;
   }
   .user-profile .user-info .name-section {
@@ -1796,14 +1885,14 @@ header {
   }
   .user-profile .user-info .user-action {
     display: inline-block;
+    font-family: GothamPro;
     color: #ff7680;
     font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 500;
     text-align: center;
-    margin-top: 20px;
+    width: 50%;
     float: right;
-    width: 25%;
   }
   .user-profile .user-info .user-action button {
     border-radius: 3px;
@@ -1823,14 +1912,14 @@ header {
     margin-left: 10px;
     cursor: pointer;
     text-align: center;
-    padding: 5px 0px 0px;
+    padding: 5px 0px 10px;
   }
   .user-profile .user-info .user-action .share > a {
-    color: #9a9a9a !important;
-    font-size: 14pt !important;
+    color: #bababa !important;
+    font-size: 13px !important;
     /* Approximation due to font substitution */
-    font-weight: 500;
-    margin-left: 10px;
+    font-weight: 400;
+    text-align: center;
   }
   .user-profile .user-info .user-action .btn-simple {
     border: 0 !important;
@@ -1856,30 +1945,28 @@ header {
     margin-top: 24px;
     position: relative;
   }
-  .user-profile .user-location .map {
-    width: 100%;
-    height: 280px !important;
-  }
   .user-profile .user-location .navigator {
-    display: none;
-  }
-  .user-profile .user-location .col-xs-8 {
-    width: 100%;
-    padding-left: 25px;
-  }
-  .user-profile .user-location .col-xs-12 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  .user-profile .user-location .row {
-    margin-right: 0px;
-    margin-left: 0px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 26px 0px rgba(134, 135, 135, 0.75);
+    width: 36px;
+    height: 36px;
+    position: relative;
+    float: right;
+    margin-top: -6%;
+    right: 5%;
+    background-image: url(../../../../images/navigator.png?v=18022018);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10011;
   }
   .user-profile .user-location .address {
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
     word-wrap: break-word;
-    width: 260px;
+  }
+  .user-profile .user-location .panel-group {
+    margin-left: -25px;
   }
   .user-profile .user-location .panel-group,
   .user-profile .user-location .panel-group .panel {
@@ -1890,6 +1977,9 @@ header {
   }
   .user-profile .user-location .panel-body {
     border: none !important;
+  }
+  .user-profile .user-location .panel-heading {
+    padding: 0px 15px;
   }
   .user-profile .user-location .panel-title {
     font-family: GothamPro !important;
@@ -1937,17 +2027,29 @@ header {
     text-decoration: none;
     font-family: GothamPro !important;
     color: #ff7680 !important;
-    font-size: 10px;
+    font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 500;
     line-height: 26px;
     /* Approximation due to font substitution */
     text-align: left;
+    /* Approximation due to font substitution */
     background-color: transparent;
     border: none !important;
   }
   .user-profile .user-location .panel-body {
-    padding: 0px;
+    padding: 0px 20px;
+  }
+  .user-profile .user-location .col-xs-8 {
+    width: 100%;
+  }
+  .user-profile .user-location .col-xs-8 label {
+    font-family: GothamPro;
+    color: #000000;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: left;
   }
   .user-profile .user-location .fa {
     color: #bababa;
@@ -2019,32 +2121,16 @@ header {
     height: 215px;
     margin: 0 auto;
   }
-  .user-profile .user-description .panel-heading {
+  .user-profile .user-description .panel {
     margin-bottom: 0px !important;
   }
-  .user-profile .user-description .panel-heading a.active {
+  .user-profile .user-description .panel a.active {
     color: #ff7680;
   }
-  .user-profile .user-description .panel-heading a,
-  .user-profile .user-description .panel-heading label {
+  .user-profile .user-description .panel a {
     color: gray;
     cursor: pointer;
     text-decoration: none;
-  }
-  .user-profile .user-description .panel-heading .btn-group + .btn-group {
-    margin-left: 10px !important;
-  }
-  .user-profile .user-description .panel-heading .btn-group.open .dropdown-toggle {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-  .user-profile .user-description .panel-heading .btn-group > a {
-    font-family: GothamPro;
-    color: #344c5e !important;
-    font-size: 14px;
-    /* Approximation due to font substitution */
-    font-weight: 700;
-    text-align: left;
   }
   .user-profile .user-description .service-pic {
     margin: 0 auto;
@@ -2071,18 +2157,26 @@ header {
     height: 239px;
     background-image: url(../../../images/promo2.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
+    background-position: center;
   }
   .user-profile .user-description .promo-pic-2 {
     height: 239px;
     background-image: url(../../../images/promo1.png);
     background-repeat: no-repeat;
-    background-size: 100% 100% !important;
+    background-size: contain;
+    background-position: center;
   }
   .user-profile .user-description .promo-content {
     height: 239px;
     margin: 0 auto;
     padding: 25px 25px 25px 25px;
+  }
+  .user-profile .user-description .promo-content label {
+    font-size: 16px;
+  }
+  .user-profile .user-description .promo-content p {
+    font-size: 14px;
   }
   .user-profile .user-description .team-pic > ul {
     margin: 0 auto !important;
@@ -2090,63 +2184,9 @@ header {
   .user-profile .user-description .team-pic > ul > li {
     vertical-align: top;
     text-align: center;
-    width: 14%;
+    width: 20%;
     height: 4%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-  }
-  .user-profile .user-description .item.list-group-item {
-    float: none;
-    width: 100%;
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 0px !important;
-    border: none !important;
-  }
-  .user-profile .user-description .panel-body .thumbnail div.row a.add-to-cart {
-    font-family: GothamPro;
-    color: #ff7680 !important;
-    font-size: 13px;
-    /* Approximation due to font substitution */
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .user-profile .user-description .list-group-item .col-xs-12 {
-    width: 25%;
-  }
-  .user-profile .user-description .item.list-group-item .list-group-image {
-    margin-right: 10px;
-  }
-  .user-profile .user-description .item.list-group-item .thumbnail {
-    margin-bottom: 0px;
-  }
-  .user-profile .user-description .item.list-group-item .caption {
-    padding: 0px 0px 0px 0px;
-  }
-  .user-profile .user-description .item.list-group-item:nth-of-type(odd) {
-    background: #eeeeee;
-  }
-  .user-profile .user-description .item.list-group-item:before,
-  .user-profile .user-description .item.list-group-item:after {
-    display: table;
-    content: " ";
-  }
-  .user-profile .user-description .item.list-group-item img {
-    float: left;
-  }
-  .user-profile .user-description .item.list-group-item:after {
-    clear: both;
-  }
-  .user-profile .user-description .list-group-item-text {
-    margin: 0 0 11px;
-  }
-  .user-profile .user-description .thumbnail {
-    padding: 0px !important;
-    border: none !important;
-    border-radius: 0px !important;
-    margin-bottom: 0px !important;
+    margin-right: 4.5%;
   }
   .user-profile h2 {
     width: 100%;
@@ -2164,7 +2204,6 @@ header {
     background: transparent;
   }
   .user-profile .mainnav-menu > li > a .fa {
-    font-size: 18px;
     margin-right: 4px;
   }
   .user-profile .img-thumbnail {
@@ -2174,15 +2213,10 @@ header {
   .user-profile .reference > ul > li {
     text-align: center;
     margin-left: 15px;
-    margin-right: 62px;
-    margin-bottom: 16px;
+    margin-right: 10px;
   }
 }
 @media only screen and (min-width: 420px) and (max-width: 767px) {
-  .user-profile {
-    color: #ffffff;
-    font-family: 'GothamPro';
-  }
   .user-profile .banner {
     height: 182px;
     background-size: cover;
