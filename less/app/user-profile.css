@@ -1,9 +1,15 @@
 ﻿.flex {
   display: flex;
 }
+header {
+  height: 87px;
+}
 .navbar {
   background: white;
   border: 0;
+}
+.navbar .container {
+  margin-top: 1%;
 }
 .navbar .navbar-brand:hover,
 .navbar .navbar .navbar-brand:focus {
@@ -73,6 +79,20 @@
   text-align: center;
   line-height: 36px;
 }
+#navbar {
+  height: 41px !important;
+}
+#navbar .navbar-nav > li > a {
+  padding-top: 10px !important;
+  padding-bottom: 13px;
+  padding-left: 25px;
+  font-family: GothamPro;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding-right: 25px;
+}
 .nav-menu {
   background: #344c5e;
 }
@@ -94,7 +114,7 @@
   margin-top: 20px;
 }
 .header {
-  width: 1920px;
+  width: 100%;
   height: 292px;
 }
 .menu {
@@ -130,9 +150,14 @@
     background-color: transparent;
   }
   .navbar .header-quote {
-    padding: 16px;
+    padding: 16px 5px;
+    font-family: GothamPro;
+    color: #344c5e;
     font-size: 14px;
-    font-weight: 600;
+    /* Approximation due to font substitution */
+    font-weight: 500;
+    text-align: left;
+    text-transform: uppercase;
   }
   .navbar .search-bar {
     position: relative;
@@ -228,6 +253,15 @@
     display: none !important;
   }
 }
+.user-profile .col-lg-3 {
+  width: 27%;
+}
+.user-profile .col-lg-9 {
+  width: 73%;
+}
+.user-profile .mainnav:after {
+  background-image: none;
+}
 .user-profile .banner {
   background-image: url(../../../../images/banner.png?v=18022018);
   background-repeat: no-repeat;
@@ -252,45 +286,70 @@
 }
 .user-profile p,
 .user-profile .media-body {
-  font-family: GothamPro;
-  color: #808080;
-  font-size: 10px;
-  font-weight: 700;
+  color: #6f6f6f;
+  font-size: 14px;
+  /* Approximation due to font substitution */
+  font-weight: 400;
   text-align: left;
 }
 @media only screen and (min-width: 1281px) {
   .user-profile {
     color: #ffffff;
-    font-family: 'GothamPro';
+    font-family: GothamPro !important;
+  }
+  .user-profile .section-left-fix {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 300px;
+  }
+  .user-profile .section-left-stop {
+    position: fixed;
+    z-index: 100;
+    top: -250px !important;
+    width: 300px;
+  }
+  .user-profile .section-right .mainnav-fix {
+    position: fixed;
+    z-index: 100;
+    top: 0 !important;
+    background: #fff !important;
+    width: 803px;
   }
   .user-profile #map {
-    height: 300px;
+    height: 182px !important;
   }
   .user-profile .text-light-grey {
     color: #aaa;
   }
   .user-profile .text-success {
     color: #09b752;
+    margin-right: 15%;
   }
   .user-profile .text-danger {
     color: #ff7680;
+    text-transform: uppercase;
+    text-decoration: none;
   }
   .user-profile .section-title {
     display: block;
     border-bottom: 1px solid;
-    font-size: 28px;
-    padding: 24px 0 12px;
+    padding: 10px 0 12px;
     margin-bottom: 16px;
-    font-family: GothamPro;
     color: #344c5e;
     font-size: 26px;
     /* Approximation due to font substitution */
     font-weight: 700;
+    text-align: left;
+  }
+  .user-profile label.section-title > span {
+    font-size: 18px;
+    /* Approximation due to font substitution */
   }
   .user-profile label.section-title > span > i,
   .user-profile .panel-title > a > span > i {
     color: #aeaeae !important;
-    font-size: 10px;
+    font-size: 5px;
     /* Approximation due to font substitution */
     font-weight: 400;
     text-align: left;
@@ -315,6 +374,16 @@
     font-size: 26px;
     /* Approximation due to font substitution */
     font-weight: 400;
+    text-align: left;
+  }
+  .user-profile .about-text {
+    font-family: GothamPro;
+    color: #6f6f6f;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 22px;
+    /* Approximation due to font substitution */
     text-align: left;
   }
   .user-profile .krajee-default.file-preview-frame .kv-file-content {
@@ -348,7 +417,7 @@
   .user-profile .media-heading > span {
     font-family: GothamPro;
     color: #b8b8b8 !important;
-    font-size: 11px;
+    font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 400;
     line-height: 22px;
@@ -379,10 +448,12 @@
   .user-profile .panel-deliverables h4 {
     font-family: GothamPro;
     color: #344c5e !important;
-    font-size: 13px;
+    color: #344c5e;
+    font-size: 14px;
     /* Approximation due to font substitution */
-    font-weight: 500;
+    font-weight: 700;
     text-align: left;
+    text-transform: uppercase;
   }
   .user-profile .panel-deliverables .panel-body > .row {
     margin-bottom: 16px;
@@ -453,13 +524,14 @@
     display: flex;
   }
   .user-profile .user-info .user-logo {
-    width: 88px;
+    width: 60px;
     height: 60px;
     background-image: url(../../../../images/logo.png?v=18022018);
     background-repeat: no-repeat;
     margin: 0px !important;
     display: inline-block;
-    clear: left;
+    clear: both;
+    background-size: contain;
     float: left;
   }
   .user-profile .user-info .name-section {
@@ -512,12 +584,14 @@
   }
   .user-profile .user-info .user-action {
     display: inline-block;
+    font-family: GothamPro;
     color: #ff7680;
     font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 500;
     text-align: center;
     margin-top: 20px;
+    width: 97%;
   }
   .user-profile .user-info .user-action button {
     border-radius: 3px;
@@ -540,10 +614,11 @@
     padding: 5px 0px 0px;
   }
   .user-profile .user-info .user-action .share > a {
-    color: #9a9a9a !important;
-    font-size: 14pt !important;
+    color: #bababa !important;
+    font-size: 13px !important;
     /* Approximation due to font substitution */
-    font-weight: 500;
+    font-weight: 400;
+    text-align: center;
     margin-left: 10px;
   }
   .user-profile .user-info .user-action .btn-simple {
@@ -605,6 +680,9 @@
   .user-profile .user-location .panel-body {
     border: none !important;
   }
+  .user-profile .user-location .panel-heading {
+    padding: 0px 15px;
+  }
   .user-profile .user-location .panel-title {
     font-family: GothamPro !important;
     font-size: 10px;
@@ -651,17 +729,29 @@
     text-decoration: none;
     font-family: GothamPro !important;
     color: #ff7680 !important;
-    font-size: 10px;
+    font-size: 13px;
     /* Approximation due to font substitution */
     font-weight: 500;
     line-height: 26px;
     /* Approximation due to font substitution */
     text-align: left;
+    /* Approximation due to font substitution */
     background-color: transparent;
     border: none !important;
   }
   .user-profile .user-location .panel-body {
-    padding: 0px;
+    padding: 0px 20px;
+  }
+  .user-profile .user-location .col-xs-8 {
+    width: 100%;
+  }
+  .user-profile .user-location .col-xs-8 label {
+    font-family: GothamPro;
+    color: #000000;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: left;
   }
   .user-profile .user-location .fa {
     color: #bababa;
@@ -780,16 +870,21 @@
     margin: 0 auto;
     padding: 25px 25px 25px 25px;
   }
+  .user-profile .user-description .promo-content label {
+    font-size: 16px;
+  }
+  .user-profile .user-description .promo-content p {
+    font-size: 14px;
+  }
   .user-profile .user-description .team-pic > ul {
     margin: 0 auto !important;
   }
   .user-profile .user-description .team-pic > ul > li {
     vertical-align: top;
     text-align: center;
-    width: 14%;
+    width: 15%;
     height: 4%;
-    margin-right: 5%;
-    margin-bottom: 5%;
+    margin-right: 4.5%;
   }
   .user-profile h2 {
     width: 100%;
@@ -807,7 +902,6 @@
     background: transparent;
   }
   .user-profile .mainnav-menu > li > a .fa {
-    font-size: 18px;
     margin-right: 4px;
   }
   .user-profile .img-thumbnail {
@@ -861,14 +955,14 @@
   .user-profile .section-title {
     display: block;
     border-bottom: 1px solid;
-    font-size: 28px;
-    padding: 24px 0 12px;
+    padding: 2px 0 12px;
     margin-bottom: 16px;
     font-family: GothamPro;
     color: #344c5e;
     font-size: 26px;
     /* Approximation due to font substitution */
     font-weight: 700;
+    text-align: left;
   }
   .user-profile label.section-title > span > i,
   .user-profile .panel-title > a > span > i {
@@ -1183,7 +1277,17 @@
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 0px rgba(134, 135, 135, 0.55);
     word-wrap: break-word;
-    width: 260px;
+  }
+  .user-profile .user-location .col-xs-8 {
+    width: 100%;
+  }
+  .user-profile .user-location .col-xs-8 label {
+    font-family: GothamPro;
+    color: #000000;
+    font-size: 14px;
+    /* Approximation due to font substitution */
+    font-weight: 400;
+    text-align: left;
   }
   .user-profile .user-location .panel-group,
   .user-profile .user-location .panel-group .panel {
@@ -1697,7 +1801,7 @@
     /* Approximation due to font substitution */
     font-weight: 500;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 20px;
     float: right;
     width: 25%;
   }
@@ -2074,7 +2178,7 @@
     margin-bottom: 16px;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (min-width: 420px) and (max-width: 767px) {
   .user-profile {
     color: #ffffff;
     font-family: 'GothamPro';
@@ -2101,13 +2205,6 @@
     border-top: none;
     border-left: 0px;
     border-right: 0px;
-  }
-  .user-profile .fa {
-    color: #bababa;
-    font-size: 10px !important;
-    /* Approximation due to font substitution */
-    font-weight: 400;
-    text-align: center;
   }
   .user-profile .section-right {
     width: 100% !important;
@@ -2395,6 +2492,7 @@
     margin-top: 15px;
   }
   .user-profile .user-info .user-action {
+    width: 120px;
     float: right;
     margin-top: 0px;
   }
@@ -2719,7 +2817,7 @@
     padding: 0px 0px 0px 0px;
   }
   .user-profile .user-description .item.list-group-item:nth-of-type(odd) {
-    /*background: #eeeeee;*/
+    background: #eeeeee;
   }
   .user-profile .user-description .item.list-group-item:before,
   .user-profile .user-description .item.list-group-item:after {
@@ -2767,11 +2865,11 @@
   .user-profile .reference > ul > li {
     text-align: center;
     margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 62px;
     margin-bottom: 16px;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 667px) {
+@media only screen and (min-width: 420px) and (max-width: 550px) {
   .user-profile .section-right {
     margin-top: 10px;
   }
@@ -2782,42 +2880,8 @@
     font-weight: 500;
     background: transparent;
   }
-  .user-profile .col-xs-4 {
-    width: 100%;
-  }
-  .user-profile #service .col-xs-12 {
-    width: 50%;
-  }
-  .user-profile .col-xs-6 {
-    width: 80%;
-  }
-  .user-profile .user-description .item.list-group-item .list-group-image {
-    margin-right: 10px;
-    height: auto;
-    width: 26%;
-  }
-  .user-profile .user-description .item.list-group-item .caption {
-    padding: 0 0 0 0;
-    width: 70%;
-    float: right;
-    /* text-align: left; */
-  }
   .user-profile .user-description .list-group-item .col-xs-12 {
-    width: 40%;
-  }
-  .user-profile .nav-tabs > li > a {
-    margin-right: 2px;
-    line-height: 1.42857143;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-    font-size: 10px;
-  }
-  .user-profile .user-location .fa {
-    color: #bababa;
-    font-size: 11px;
-    /* Approximation due to font substitution */
-    font-weight: 400;
-    text-align: center;
+    width: 24%;
   }
   .user-profile .user-description .panel-body .thumbnail div.row a.add-to-cart {
     font-size: 10px;

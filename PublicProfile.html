@@ -58,7 +58,7 @@
         Object.assign(window.bitMin, {
             viewData: { "appInsightsInstrumentationKey": "", "cultureInfo": "en-GB" },
         });
-       
+
     </script>
     <script src="https://just-get.com/api/CDN/Script/get-location.js"></script>
     <script src="https://just-get.com/api/CDN/Script/helpers.js"></script>
@@ -177,7 +177,7 @@
                                             <input type="hidden" name="whatever1" class="rating-value" value="4">
                                             <span class="rating-value">4/5</span>
                                         </div>
-                                        <div class="hidden-md link">www.blazedbarandgrill.com</div>
+                                        <div class="hidden-lg link">www.blazedbarandgrill.com</div>
 
                                     </div>
 
@@ -187,7 +187,7 @@
                                 <div class="col-lg-12">
                                     Blazed Bar and Grill - if you don't lick your fingers,enjoy only half!
                                 </div>
-                                <div class="link">www.blazedbarandgrill.com</div>
+                                <div class="link col-lg-12">www.blazedbarandgrill.com</div>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-lg-12">
                                 <div class="user-action p8">
@@ -195,7 +195,7 @@
                                         <a><i class="fa fa-share-alt"></i></a>
                                         <a><i class="glyphicon glyphicon-bookmark"></i></a>
                                     </div>
-                                    <button class="pull-right">SEND A MESSAGE</button>
+                                    <button class="pull-left">SEND A MESSAGE</button>
                                 </div>
                             </div>
                         </div>
@@ -232,9 +232,9 @@
                                         </div>
                                     </div>
                                     <div id="menu1" class="tab-pane fade">
-                                      
+
                                     </div>
-                                   
+
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-lg-12">
@@ -322,7 +322,7 @@
                 <div class="section-right col-xs-12 col-lg-9 pull-right">
                     <div class="mainnav">
                         <div class="container">
-                            <a class="mainnav-toggle hidden-xs" data-toggle="collapse" data-target=".mainnav-collapse">
+                            <a class="mainnav-toggle " data-toggle="collapse" data-target=".mainnav-collapse">
                                 <span class="sr-only">ToggleNavigation</span>
                                 <i class="fa fa-bars"></i>
                             </a>
@@ -363,7 +363,7 @@
                                             More &nbsp;<i class="fa fa-caret-down"></i>
                                         </a>
                                         <!--<ul class="dropdown-menu" role="menu">
-                                           
+
                                         </ul>-->
                                     </li>
                                 </ul>
@@ -378,15 +378,13 @@
                             <div class="col-xs-12">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-6">
-                                        <iframe width="100%" height="215"
+                                        <iframe width="396" height="196"
                                                 src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                     </div>
-                                    <div class="col-xs-12 col-sm-6">
+                                    <div class="col-xs-12 col-sm-6 about-text">
                                         It is a long established fact that reader will be distracted by the readable content of a page when looking at its layout.
                                         The point of using lorem ipsum is that it has a more-or-less normal distribution of letters. as opposed to using content here.
-                                        making it look like readable English. Various versions have evolved over the years sometimes by accident, somtime on purpose.<br />
-                                        Its is a long the blished fact that reader will be distracted by the readable content of a page when looking at its layout. the point
-                                        of using lorem ipsum.
+                                        making it look like readable English.
                                     </div>
                                 </div>
                             </div>
@@ -588,7 +586,7 @@
                                     </div>
                                     <div class="loadmore"><a>SEE MORE 4 CATEGORIES &nbsp; <i class="fa fa-angle-down"></i></a></div>
                                 </div>
-                                <div class="panel-group panel-deliverables hidden-lg" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel-group panel-deliverables hidden-md visible-xs visible-sm" id="accordion" role="tablist" aria-multiselectable="true">
                                     <div id="services" class="panel panel-default">
                                         <div class="panel-heading">
                                             <div class="pull-left">
@@ -778,7 +776,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="loadmore"><a>SEE MORE 4 CATEGORIES &nbsp; <i class="fa fa-angle-down"></i></a></div>
+
                                         </div>
 
                                     </div>
@@ -787,7 +785,16 @@
                         </div>
                         <div id="reviews">
                             <div>
-                                <label class="section-title">REVIEWS<span class="count"><i class="fa fa-circle"></i>4</span> <a class="pull-right"><i class="fa fa-pencil"> &nbsp; WRITE A REVIEW</i></a></label>
+                                <label class="section-title">
+                                    REVIEWS
+                                    <span class="count">
+                                        <i class="fa fa-circle"></i>4
+                                    </span>
+                                    <a class="pull-right">
+                                        <i class="fa fa-pencil"> </i>
+                                        &nbsp; WRITE A REVIEW
+                                    </a>
+                                </label>
                             </div>
                             <div>
                                 <div class="media">
@@ -913,7 +920,36 @@
                     $('.content .col-md-7-width20').addClass('col-md-7').removeClass('col-md-7-width20');
                 });
 
+                var sectionLeft = $('.section-left').offset().top;       // get initial position of the element
+                var mainnav = $('.mainnav').offset().top;
+                var stopPosition = $('.reference').offset().top - $('.section-left').outerHeight();
 
+                $(window).scroll(function () {                  // assign scroll event listener
+
+                    var currentScroll = $(window).scrollTop(); // get current position
+
+                    if (currentScroll >= sectionLeft) {           // apply position: fixed if you
+                        $('.section-left').addClass('section-left-fix');
+
+                    } else {                                   // apply position: static
+                        $('.section-left').removeClass('section-left-fix');
+                    }
+                    if ((currentScroll + 80) > stopPosition) {
+                        $('.section-left').addClass('section-left-stop');
+                    } else {
+                        $('.section-left').removeClass('section-left-stop');
+                    }
+                  
+
+                    if (currentScroll >= mainnav) {           // apply position: fixed if you
+
+                        $('.mainnav').addClass('mainnav-fix');
+                    } else {                                   // apply position: static
+
+                        $('.mainnav').removeClass('mainnav-fix');
+                    }
+
+                });
             });
 
         </script>
@@ -931,7 +967,9 @@
                 });
             }
 
-
+            $('.navigator').click(function () {
+                window.open('http://maps.google.com/maps?center=-25.363,131.044&&zoom=4&size=1920x1600&key=AIzaSyAAlb992cRYzvfz5mPU29pG4Al7WS3EPcY');
+            });
 
             $(".nav a").on("click", function () {
                 $(".nav").find(".active").removeClass("active");
